@@ -1,4 +1,4 @@
 # leomurca.xyz
 
-My personal website source code. Be free!
+My personal website source code.
 

@@ -52,8 +52,7 @@ header nav a {
 }
 
 header nav a:hover {
-  outline: 2px solid #000000;
-  outline-offset: 2px;
+  border-bottom: 2px solid #000000;
 }
 
 .main-title {
@@ -61,3 +60,30 @@ header nav a:hover {
   color: inherit;
 }
 /* endregion header*/
+
+/* region bio*/
+.bio-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile-image {
+  height: 300px;
+}
+
+/* endregion bio*/
+
+/* region footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+  margin-top: auto;
+}
+
+footer p {
+  text-align: center;
+}
+/* endregion footer*/

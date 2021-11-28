@@ -68,10 +68,6 @@ header nav a:hover {
   justify-content: center;
 }
 
-.profile-image {
-  height: 300px;
-}
-
 /* endregion bio*/
 
 /* region footer*/
@@ -87,3 +83,13 @@ footer p {
   text-align: center;
 }
 /* endregion footer*/
+
+/* region responsive*/
+@media only screen and (max-device-width: 812px) {
+  .bio-section{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* endregion responsive*/

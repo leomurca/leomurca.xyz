@@ -1,0 +1,2 @@
+ARTICLES_SRC:=articles
+ARTICLE:="articles/how-to-create-git-profiles.md"

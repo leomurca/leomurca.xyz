@@ -78,6 +78,17 @@ pre {
 }
 /* endregion pre code*/
 
+/* region blockquote*/
+blockquote {
+  margin: 30px auto;
+  font-style: italic;
+  color: #000000;
+  border-left: 3px solid #282828;
+  padding-left: 20px;
+  position: relative;
+}
+/* endregion blockquote*/
+
 /* region footer*/
 footer {
   display: flex;

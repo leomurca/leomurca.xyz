@@ -22,7 +22,7 @@ do
   printf '<main>' >> $NEW_FILE_PATH &&
   sed "2i \*By $AUTHOR_AND_DATE\*" $entry | markdown -f fencedcode - >> $NEW_FILE_PATH &&
   printf '</main>' >> $NEW_FILE_PATH &&
-  cat templates/footer.html >> $NEW_FILE_PATH &&
-  rm list.md list.html
-done
+  cat templates/footer.html >> $NEW_FILE_PATH
+done &&
 
+rm list.md list.html

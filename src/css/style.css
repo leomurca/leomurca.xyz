@@ -75,6 +75,7 @@ pre {
   background: #282828;
   color: #fbf1c7;
   padding: 20px;
+  overflow-x: auto;
 }
 /* endregion pre code*/
 
@@ -102,7 +103,6 @@ footer p {
   text-align: center;
 }
 /* endregion footer*/
-
 
 /* region articles list*/
 .articles-list ul {
@@ -148,6 +148,31 @@ footer p {
   .bio-section {
     flex-direction: column;
     align-items: center;
+  }
+
+  .articles-list ul li {
+    flex-direction: column;
+    height: 70px;
+    align-items: start;
+    width: 100%;
+  }
+
+  .articles-list ul li a {
+    font-size: 20px;
+    overflow: inherit;
+    white-space: break-spaces;
+    border-bottom: none;
+    text-decoration: underline;
+    line-height: initial;
+  }
+
+  .articles-list ul li span {
+    flex: 0;
+    padding-bottom: 10px;
+  }
+
+  footer {
+    margin-top: 30px;
   }
 }
 /* endregion responsive*/

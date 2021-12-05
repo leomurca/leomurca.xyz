@@ -14,7 +14,7 @@ do
   mkdir -p $NEW_DIR_PATH &&
   sed "s/\%PAGE_TITLE\%/$PAGE_TITLE/ ; s/\%PAGE_DESCRIPTION\%/$PAGE_DESCRIPTION/" templates/header.html > $NEW_FILE_PATH &&
   printf '<main>' >> $NEW_FILE_PATH &&
-  $(sed "2i \*By $AUTHOR_AND_DATE\*" $entry | markdown -f fencedcode - >> $NEW_FILE_PATH) &&
+  sed "2i \*By $AUTHOR_AND_DATE\*" $entry | markdown -f fencedcode - >> $NEW_FILE_PATH &&
   printf '</main>' >> $NEW_FILE_PATH &&
   cat templates/footer.html >> $NEW_FILE_PATH
 done

@@ -1,5 +1,4 @@
 # How to create git profiles
-<!--- This --->
 
 Mussum Ipsum, cacilds vidis litro abertis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Cevadis im ampola pa arma uma pindureta. Mé faiz elementum girarzis, nisi eros vermeio.
 

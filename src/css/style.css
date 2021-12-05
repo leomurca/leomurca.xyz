@@ -103,6 +103,46 @@ footer p {
 }
 /* endregion footer*/
 
+
+/* region articles list*/
+.articles-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.articles-list ul li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  height: 20px;
+}
+
+.articles-list ul li span {
+  flex: 0 0 150px;
+  font-family: monospace;
+  letter-spacing: 0;
+}
+
+.articles-list ul li a {
+  height: 18px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.articles-list ul li a:hover {
+  border-bottom: 2px solid #2652b7;
+  color: #2652b7;
+}
+/* endregion articles list*/
+
 /* region responsive*/
 @media only screen and (max-device-width: 812px) {
   .bio-section {
@@ -110,5 +150,4 @@ footer p {
     align-items: center;
   }
 }
-
 /* endregion responsive*/

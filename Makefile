@@ -2,7 +2,7 @@
 
 .PHONY: help init build deploy clean serve
 
-BLOG_REMOTE=rootleo:/var/www/leomurca.xyz
+BLOG_REMOTE=rootleo:/srv/www/leomurca.xyz
 
 help:
 	$(info make init|deploy|build|clean|serve)

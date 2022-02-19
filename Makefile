@@ -10,7 +10,7 @@ help:
 init:
 	echo "Making $@"; \
 
-build: 
+build: clean
 	echo "Making $@"
 	$(shell ./scripts/generate-html-articles.sh)
 
@@ -20,6 +20,7 @@ deploy: build
 
 clean:
 	echo "Making $@"
+	rm -rf src/articles
 
 serve:
 	python -m http.server --directory src

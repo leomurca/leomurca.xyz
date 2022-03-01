@@ -26,33 +26,26 @@ body {
 /* region header*/
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: left;
 }
 
+header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
 header h1 {
   border-bottom: 3px solid #000000;
+  font-size: 2.5rem;
   width: fit-content;
 }
 
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-header nav a {
-  text-decoration: none;
-  color: #000000;
-  padding: 10px;
-  font-weight: 600;
-  font-size: 20px;
-}
-
-header nav a:hover {
-  border-bottom: 2px solid #000000;
+header p {
+  font-size: 1.3rem;
 }
 
 .main-title {
@@ -60,14 +53,6 @@ header nav a:hover {
   color: inherit;
 }
 /* endregion header*/
-
-/* region bio*/
-.bio-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-/* endregion bio*/
 
 /* region pre code*/
 pre {
@@ -145,9 +130,14 @@ footer p {
 
 /* region responsive*/
 @media only screen and (max-device-width: 812px) {
-  .bio-section {
-    flex-direction: column;
-    align-items: center;
+  header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  header h1 {
+    font-size: 2rem;
   }
 
   .articles-list ul li {

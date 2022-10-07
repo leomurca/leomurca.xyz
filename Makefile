@@ -12,15 +12,15 @@ init:
 
 build: clean
 	echo "Making $@"
-	$(shell ./scripts/generate-html-articles.sh)
+	hugo
 
 deploy: build
 	echo "Making $@"
-	rsync -rLtvz src/ $(BLOG_REMOTE)
+	rsync -rLtvz public/ $(BLOG_REMOTE)
 
 clean:
 	echo "Making $@"
-	rm -rf src/articles
+	rm -rf public/ 
 
 serve:
-	python -m http.server --directory src
+	python -m http.server --directory public

@@ -1,4 +1,4 @@
-baseURL = 'localhost'
+baseURL = 'https://leomurca.xyz'
 languageCode = 'en-us'
 title = 'Leonardo Murça'
 

@@ -141,7 +141,7 @@ footer p {
   height: 20px;
 }
 
-.articles-list ul li span {
+.articles-list ul li time {
   flex: 0 0 150px;
   font-family: monospace;
   letter-spacing: 0;
@@ -162,6 +162,18 @@ footer p {
   color: #bdae93;
 }
 
+/* "Hide" checkbox -- moves it off screen*/
+#menu-btn {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+
+/* Hide hamburger for bigger screens */
+.menu-icon {
+  visibility: hidden;
+}
+
 /* region responsive*/
 @media only screen and (max-device-width: 812px) {
   header img {
@@ -172,6 +184,123 @@ footer p {
 
   header h1 {
     font-size: 2rem;
+  }
+
+  header {
+    display: grid;
+    grid-template-areas:
+       "title   title   hamburger"
+       "nav     nav     nav";
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    grid-area: hamburger;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 20px;
+    position: relative;
+    user-select: none;
+    visibility: visible;
+  }
+
+  .navicon {
+    background: #fbf1c7;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+  }
+
+  .navicon:before {
+    top: 5px;
+  }
+
+  .navicon:after {
+    top: -5px;
+  }
+
+  .navicon:before, .navicon:after {
+    background: #fbf1c7;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    transition: all .2s ease-out;
+  }
+
+  .menu {
+    grid-area: nav;
+    width: 100%;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #fbf1c7;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu a {
+    margin: 0;
+    background-color: #d79921;
+    color: #1d2021;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before,
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    top: 0;
+  }
+
+
+  .about-me-home {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .about-me-home img {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+  }
+
+  .about-me-home-left {
+    padding: 0;
   }
 
   .articles-list ul li {
@@ -187,10 +316,12 @@ footer p {
     white-space: break-spaces;
     border-bottom: none;
     text-decoration: underline;
-    line-height: initial;
+    text-decoration-color: #d79921;
+    text-decoration-thickness: 3px;
+    line-height: 1.5;
   }
 
-  .articles-list ul li span {
+  .articles-list ul li time{
     flex: 0;
     padding-bottom: 10px;
   }

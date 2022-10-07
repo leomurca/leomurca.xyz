@@ -2,9 +2,15 @@
     <a class="main-title" href="{{ .Site.BaseURL }}">
         <h1>{{ .Site.Title }}</h1>
     </a>
-    <nav>
+
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn" >
+      <span class="navicon"></span>
+    </label>
+
+    <nav class="menu">
 		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}">{{ .Name }}</a>
+		<a class='nav-item' href="{{ .URL }}">{{ .Name }}</a>
 		{{ end }}
 	</nav>
 </header>

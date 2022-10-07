@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leonardo Murça</title>
+    <link>localhost/</link>
+    <description>Recent content on Leonardo Murça</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Oct 2022 20:45:21 -0300</lastBuildDate><atom:link href="localhost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Access Test Only Files From Unit and Instrumented Test Packages</title>
+      <link>localhost/posts/how-to-access-test-only-files-from-unit-and-instrumented-test-packages/</link>
+      <pubDate>Thu, 06 Oct 2022 20:45:21 -0300</pubDate>
+      
+      <guid>localhost/posts/how-to-access-test-only-files-from-unit-and-instrumented-test-packages/</guid>
+      <description>TL;DR Create a directory called testCommon and add the code below to your build.gradle file.
+android { ... sourceSets { test { java.srcDirs += src/testCommon } androidTest { java.srcDirs += src/testCommon } } } Have you ever been in a situation where you need to access util files from both test and androidTest packages? If so, this article may be useful for you.
+Let&amp;rsquo;s say that you have a file called Placeholders.</description>
+    </item>
+    
+  </channel>
+</rss>

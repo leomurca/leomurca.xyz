@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+        {{ partial "head.html" . }}
+    <body>
+        {{ partial "header.html" . }}
+        <div class="about-me-home">
+            <div class="about-me-home-left">
+                <span>Hi, my name is</span>
+                <h1 class="about-me-home-name">Leonardo.</h1>
+                <p>
+                    A passionate software engineer. I tend to make use of modern mobile and web technologies to build applications that looks great, feels fantastic, and functions correctly.
+                </p>
+            </div>
+            <img
+                width="250"
+                height="250"
+                src="/img/avatar.webp"
+                alt="A picture of me smiling, wearing a gray t-shirt and a stone collar with a yellowish background behind me."
+            />
+        </div>
+        {{ partial "footer.html" . }}
+    </body>
+</html>

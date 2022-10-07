@@ -1,0 +1,17 @@
+{{ define "main"}}
+<main>
+<section>
+        <h2>Posts</h2>
+        <div class="articles-list">
+            <ul>
+                {{ range .Pages }}
+                    <li>
+                        <span>{{ dateFormat "Jan 2, 2006" .Date }}</span> 
+                        <a href="{{ .RelPermalink }}">{{ .Title }} </a></li>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+</main>
+{{ end }}

@@ -4,34 +4,19 @@ date: 2022-10-11T16:51:53-03:00
 draft: true
 ---
 
+Repositories used for the tutorial: 
+- [gh-remote](https://github.com/leomurca/gh-remote);
+- [gl-remote](https://gitlab.com/leomurca/gl-remote.git).
+
 ## TL;DR
-
-- These are the 2 repositories used for this guide: [gh-remote](https://github.com/leomurca/gh-remote) and [gl-remote](https://gitlab.com/leomurca/gl-remote.git). Also, the primary repository, which was the one cloned locally, is the [gh-remote](https://github.com/leomurca/gh-remote).
-
 - Clone the primary repository ([gh-remote](https://github.com/leomurca/gh-remote));
 ```shell
 $ git clone git@github.com:leomurca/gh-remote.git
 ```
 
-- List all remotes added to your repo;
-```shell
-$ git remote -v
-origin  git@github.com:leomurca/gh-remote.git (fetch)
-origin  git@github.com:leomurca/gh-remote.git (push)
-```
-
 - Add the secondary remote ([gl-remote](https://gitlab.com/leomurca/gl-remote.git)) to the cloned folder and list all the remotes afterwards;
 ```shell
 $ git remote add gitlab git@gitlab.com:leomurca/gl-remote.git
-
-```
-
-```shell
-$ git remote -v
-gitlab  git@gitlab.com:leomurca/gl-remote.git (fetch)
-gitlab  git@gitlab.com:leomurca/gl-remote.git (push)
-origin  git@github.com:leomurca/gh-remote.git (fetch)
-origin  git@github.com:leomurca/gh-remote.git (push)
 ```
 
 - Add a third remote that will be used to push to all the remotes at the same time. For conveniece, we'll name it as `all`. Also, as the url, we'll use the value `fetch-not-supported`. Then, list the remotes;
@@ -39,35 +24,14 @@ origin  git@github.com:leomurca/gh-remote.git (push)
 ```shell
 $ git remote add all fetch-not-supported
 ```
-```shell
-$ git remote -v
-all     fetch-not-supported (fetch)
-all     fetch-not-supported (push)
-gitlab  git@gitlab.com:leomurca/gl-remote.git (fetch)
-gitlab  git@gitlab.com:leomurca/gl-remote.git (push)
-origin  git@github.com:leomurca/gh-remote.git (fetch)
-origin  git@github.com:leomurca/gh-remote.git (push)
-```
 
-- And finally add the remotes that you want your code to be pushed when `git push all <BRANCH>` is executed;
+- Add the remotes that you want your code to be pushed when `git push all <BRANCH>` is executed;
 ```shell
 $ git remote set-url --add --push all git@gitlab.com:leomurca/gl-remote.git
 $ git remote set-url --add --push all git@github.com:leomurca/gh-remote.git
 ```
 
-- See all the remotes added;
-```shell
-$ git remote -v
-all     fetch-not-supported (fetch)
-all     git@gitlab.com:leomurca/gl-remote.git (push)
-all     git@github.com:leomurca/gh-remote.git (push)
-gitlab  git@gitlab.com:leomurca/gl-remote.git (fetch)
-gitlab  git@gitlab.com:leomurca/gl-remote.git (push)
-origin  git@github.com:leomurca/gh-remote.git (fetch)
-origin  git@github.com:leomurca/gh-remote.git (push)
-```
-
-- Then, to test if it is working, change some code locally, run the command below and check your both remotes (Be aware of the branch that you are using. In our example, we are using the `main` branch).
+- And finally to test if it is working, change some code locally, run the command below and check your both remotes (Be aware of the branch that you are using. In our example, we are using the `main` branch).
 ```shell
 $ git push all main
 Enumerating objects: 5, done.

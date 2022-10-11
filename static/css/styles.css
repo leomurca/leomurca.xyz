@@ -316,9 +316,14 @@ footer p {
     justify-content: center;
   }
 
+  .articles-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
   .articles-list ul li {
     flex-direction: column;
-    height: 70px;
     align-items: start;
     width: 100%;
   }
@@ -334,13 +339,15 @@ footer p {
     line-height: 1.5;
   }
 
-  .articles-list ul li time{
+  .articles-list ul li time {
     flex: 0;
     padding-bottom: 10px;
   }
 
   footer {
-    margin-top: 30px;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
   }
 }
 /* endregion responsive*/

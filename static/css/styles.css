@@ -337,6 +337,7 @@ footer p {
     text-decoration-color: #d79921;
     text-decoration-thickness: 3px;
     line-height: 1.5;
+    height: max-content;
   }
 
   .articles-list ul li time {

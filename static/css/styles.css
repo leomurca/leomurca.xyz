@@ -35,6 +35,10 @@ body a:hover {
   color: #1d2021;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: underline;
+}
+
 /* region about me home*/
 .about-me-home {
   margin: 0;
@@ -77,6 +81,10 @@ body a:hover {
   text-decoration: unset;
   color: inherit;
   border-bottom: unset;
+}
+
+.main-title h1 {
+  text-decoration: none;
 }
 
 .main-title:hover {

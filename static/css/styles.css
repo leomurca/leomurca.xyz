@@ -137,6 +137,7 @@ footer {
   justify-content: center;
   height: 50px;
   margin-top: auto;
+  padding-top: 50px;
 }
 
 footer p {

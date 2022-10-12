@@ -1,7 +1,7 @@
 ---
 title: "How to Access Test Only Files From Unit and Instrumented Test Packages"
 date: 2022-02-19
-draft: true
+draft: false 
 ---
 
 ## TL;DR

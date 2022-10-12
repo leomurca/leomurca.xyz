@@ -1,7 +1,7 @@
 ---
 title: "How to Push to Multiple Git Remotes With One Command"
 date: 2022-10-11T16:51:53-03:00
-draft: true
+draft: false
 ---
 
 Repositories used for the tutorial: 

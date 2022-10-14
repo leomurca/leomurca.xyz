@@ -1,16 +1,16 @@
 <header>
-    <a class="main-title" href="{{ .Site.BaseURL }}">
-        <h1>{{ .Site.Title }}</h1>
-    </a>
+  <a class="main-title" href="{{ .Site.BaseURL }}">
+    <h1>{{ .Site.Title }}</h1>
+  </a>
 
-    <input tabindex="-1" class="menu-btn" type="checkbox" id="menu-btn" />
-    <label tabindex="-1" class="menu-icon" for="menu-btn" >
-      <span tabindex="-1" class="navicon"></span>
-    </label>
+  <input tabindex="-1" class="menu-btn" type="checkbox" id="menu-btn" />
+  <label tabindex="-1" class="menu-icon" for="menu-btn">
+    <span tabindex="-1" class="navicon"></span>
+  </label>
 
-    <nav class="menu">
-		{{ range .Site.Menus.main }}
-		<a class='nav-item' href="{{ .URL }}">{{ .Name }}</a>
-		{{ end }}
-	</nav>
+  <nav class="menu">
+    {{ range .Site.Menus.main }}
+    <a class='nav-item' href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
 </header>

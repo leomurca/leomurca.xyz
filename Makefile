@@ -20,7 +20,7 @@ deploy: build
 
 clean:
 	echo "Making $@"
-	rm -rf public/ 
+	rm -rf public/
 
 serve:
 	python -m http.server --directory public

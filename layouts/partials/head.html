@@ -1,20 +1,21 @@
 <head>
-    <meta charset="utf-8" />
-    {{- $title := ( .Title ) -}}
-    {{- $siteTitle := ( .Site.Title ) -}}
-    {{- if .IsHome -}}
-    <title>{{ $siteTitle }} | Home </title>
-    {{- else -}}
-    <title>{{ $title }} - {{ $siteTitle }}</title>
-    {{- end -}}
-    {{ range .AlternativeOutputFormats -}}
-      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
-    <meta name="description" content="Leonardo Murça's Webpage" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Leonardo Murça" />
-    <link rel="icon" href="/img/favicon.ico" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-  </head>
+  <meta charset="utf-8" />
+  {{- $title := ( .Title ) -}}
+  {{- $siteTitle := ( .Site.Title ) -}}
+  {{- if .IsHome -}}
+  <title>{{ $siteTitle }} | Home </title>
+  {{- else -}}
+  <title>{{ $title }} - {{ $siteTitle }}</title>
+  {{- end -}}
+  {{ range .AlternativeOutputFormats -}}
+  {{ printf `
+  <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+  <meta name="description" content="Leonardo Murça's Webpage" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Leonardo Murça" />
+  <link rel="icon" href="/img/favicon.ico" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>

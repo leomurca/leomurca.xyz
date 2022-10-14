@@ -35,7 +35,12 @@ body a:hover {
   color: #1d2021;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-decoration: underline;
 }
 
@@ -92,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: unset;
   color: unset;
 }
+
 /* endregion about me home*/
 
 /* region header*/
@@ -128,6 +134,7 @@ pre {
   padding: 20px;
   overflow-x: auto;
 }
+
 /* endregion pre code*/
 
 /* region footer*/
@@ -155,6 +162,7 @@ footer p {
   width: 20px;
   margin-right: 10px;
 }
+
 /* endregion footer*/
 
 /* region articles list*/
@@ -222,8 +230,8 @@ footer p {
   header {
     display: grid;
     grid-template-areas:
-       "title   title   hamburger"
-       "nav     nav     nav";
+      "title   title   hamburger"
+      "nav     nav     nav";
   }
 
   .menu a {
@@ -263,7 +271,8 @@ footer p {
     top: -5px;
   }
 
-  .navicon:before, .navicon:after {
+  .navicon:before,
+  .navicon:after {
     background: #fbf1c7;
     display: block;
     width: 100%;
@@ -294,24 +303,24 @@ footer p {
     padding: 15px 0;
   }
 
-  .menu-btn:checked ~ .menu {
+  .menu-btn:checked~.menu {
     max-height: 240px;
   }
 
-  .menu-btn:checked ~ .menu-icon .navicon {
+  .menu-btn:checked~.menu-icon .navicon {
     background: none;
   }
 
-  .menu-btn:checked ~ .menu-icon .navicon:before {
+  .menu-btn:checked~.menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
 
-  .menu-btn:checked ~ .menu-icon .navicon:after {
+  .menu-btn:checked~.menu-icon .navicon:after {
     transform: rotate(45deg);
   }
 
-  .menu-btn:checked ~ .menu-icon .navicon:before,
-  .menu-btn:checked ~ .menu-icon .navicon:after {
+  .menu-btn:checked~.menu-icon .navicon:before,
+  .menu-btn:checked~.menu-icon .navicon:after {
     top: 0;
   }
 
@@ -373,4 +382,5 @@ footer p {
     width: 100%;
   }
 }
+
 /* endregion responsive*/

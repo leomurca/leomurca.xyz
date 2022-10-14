@@ -2,24 +2,29 @@ baseURL = 'https://leomurca.xyz'
 languageCode = 'en-us'
 title = 'Leonardo Murça'
 
-# Code Highlight
-pygmentsstyle = "gruvbox"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-
-rssLimit = 20
-copyright = "2022 Leonardo Murça All rights reserved"
+[params]
+  description = "Leonardo Murca Webpage"
 
 [author]
 	name = "Leonardo Murça"
 	email = "leo@leomurca.xyz"
 
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+[menu]
+  [[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
 
-[[menu.main]]
-name = "All posts"
-url = "/posts"
-weight = 2
+  [[menu.main]]
+  name = "All posts"
+  url = "/posts"
+  weight = 2
+
+# Code Highlight
+pygmentsstyle = "gruvbox"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+# RSS Feed
+rssLimit = 20
+copyright = "2022 Leonardo Murça All rights reserved"

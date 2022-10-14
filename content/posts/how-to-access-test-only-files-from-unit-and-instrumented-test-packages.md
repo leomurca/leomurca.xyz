@@ -1,6 +1,7 @@
 ---
 title: "How to Access Test Only Files From Unit and Instrumented Test Packages"
 date: 2022-02-19
+description: "Learn how to make files available from different test packages in Android development."
 draft: false 
 ---
 

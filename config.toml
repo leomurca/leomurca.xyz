@@ -12,7 +12,8 @@ rssLimit = 20
 copyright = "2022 Leonardo Murça All rights reserved"
 
 [params]
-  description = "Leonardo Murca Webpage"
+  description = "Leonardo Murça Webpage"
+  featured_image = "/img/avatar.webp"
 
 [author]
 	name = "Leonardo Murça"

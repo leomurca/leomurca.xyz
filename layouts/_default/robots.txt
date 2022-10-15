@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.leomurca.xyz/sitemap.xml

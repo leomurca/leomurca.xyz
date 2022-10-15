@@ -2,6 +2,8 @@ baseURL = 'https://leomurca.xyz'
 languageCode = 'en-us'
 title = 'Leonardo Murça'
 
+enableRobotsTXT = true
+
 # Code Highlight
 pygmentsstyle = "gruvbox"
 pygmentscodefences = true

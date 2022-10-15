@@ -31,3 +31,8 @@ copyright = "2022 Leonardo Murça All rights reserved"
   name = "All posts"
   url = "/posts"
   weight = 2
+
+  [[menu.main]]
+  name = "Contact me"
+  url = "/contact"
+  weight = 3

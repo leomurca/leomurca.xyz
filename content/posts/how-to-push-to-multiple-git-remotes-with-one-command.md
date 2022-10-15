@@ -86,7 +86,7 @@ origin  git@github.com:leomurca/gh-remote.git (push)
 
 ### Adding a second remote
 
-You can notice that the default remote name assigned to the primary repo was `origin`, but you can also change it in the future. Right, now let's add the add the second remote ([gl-remote](https://gitlab.com/leomurca/gl-remote.git)) to the cloned folder and then list all the remotes afterwards;
+You can notice that the default remote name assigned to the primary repo was `origin`, but you can also change it in the future. Right, now let's just add the second remote ([gl-remote](https://gitlab.com/leomurca/gl-remote.git)) to the cloned folder and then list all the remotes afterwards;
 
 ```shell
 $ git remote add gitlab git@gitlab.com:leomurca/gl-remote.git
@@ -111,7 +111,7 @@ origin  git@github.com:leomurca/gh-remote.git (fetch)
 origin  git@github.com:leomurca/gh-remote.git (push)
 ```
 
-And finally, we'll ddd the remotes that we want our code to be pushed when `git push all <BRANCH>` is executed;
+And finally, we'll add the remotes that we want our code to be pushed when `git push all <BRANCH>` is executed;
 
 ```shell
 $ git remote set-url --add --push all git@gitlab.com:leomurca/gl-remote.git

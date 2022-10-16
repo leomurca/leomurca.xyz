@@ -60,6 +60,22 @@ figcaption {
   height: max-content;
 }
 
+.skip-to-main-content-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  padding: 1em;
+  background-color: #d79921;
+  color: #1d2021;
+  font-weight: bolder;
+  opacity: 0;
+}
+
+.skip-to-main-content-link:focus {
+  opacity: 1;
+}
+
 /* region about me home*/
 .about-me-home {
   margin: 0;

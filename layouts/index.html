@@ -4,40 +4,42 @@
 
 <body>
   {{ partial "header.html" . }}
-  <section class="about-me-home">
-    <div class="about-me-home-left">
-      <span>Hi, my name is</span>
-      <h1 class="about-me-home-name">Leonardo.</h1>
-      <p>
-        A passionate software engineer. I tend to make use of modern mobile and web technologies to build applications
-        that looks great, feels fantastic, and functions correctly.
-      </p>
-      <div id="about-me-home-icons">
-        <a href="https://git.leomurca.xyz/" target="_blank">
-          <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/git.svg"
-            alt="Git icon" />
-        </a>
-        <a href="https://gitlab.com/leomurca" target="_blank">
-          <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/gitlab.svg"
-            alt="Gitlab icon" />
-        </a>
-        <a href="https://github.com/leomurca" target="_blank">
-          <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/github.svg"
-            alt="Github icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/leonardoamurca/" target="_blank">
-          <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30"
-            src="/icons/linkedin.svg" alt="Linkedin icon" />
-        </a>
-        <a href="{{ .Site.BaseURL }}/posts/index.xml" target="_blank">
-          <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/rss.svg"
-            alt="RSS Feed icon" />
-        </a>
+  <main id="main">
+    <section class="about-me-home">
+      <div class="about-me-home-left">
+        <span>Hi, my name is</span>
+        <h1 class="about-me-home-name">Leonardo.</h1>
+        <p>
+          A passionate software engineer. I tend to make use of modern mobile and web technologies to build applications
+          that looks great, feels fantastic, and functions correctly.
+        </p>
+        <div id="about-me-home-icons">
+          <a href="https://git.leomurca.xyz/" target="_blank">
+            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/git.svg"
+              alt="Git icon" />
+          </a>
+          <a href="https://gitlab.com/leomurca" target="_blank">
+            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30"
+              src="/icons/gitlab.svg" alt="Gitlab icon" />
+          </a>
+          <a href="https://github.com/leomurca" target="_blank">
+            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30"
+              src="/icons/github.svg" alt="Github icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/leonardoamurca/" target="_blank">
+            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30"
+              src="/icons/linkedin.svg" alt="Linkedin icon" />
+          </a>
+          <a href="{{ .Site.BaseURL }}/posts/index.xml" target="_blank">
+            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/rss.svg"
+              alt="RSS Feed icon" />
+          </a>
+        </div>
       </div>
-    </div>
-    <img width="250" height="250" src="/img/avatar.webp"
-      alt="A picture of me smiling, wearing a blue t-shirt and a stone collar with some coconut trees behind me." />
-  </section>
+      <img width="250" height="250" src="/img/avatar.webp"
+        alt="A picture of me smiling, wearing a blue t-shirt and a stone collar with some coconut trees behind me." />
+    </section>
+  </main>
   {{ partial "footer.html" . }}
 </body>
 

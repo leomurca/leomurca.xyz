@@ -44,6 +44,22 @@ h6 {
   text-decoration: underline;
 }
 
+strong {
+  color: #d79921;
+  font-weight: bolder;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.body img {
+  width: 100%;
+  height: max-content;
+}
+
 /* region about me home*/
 .about-me-home {
   margin: 0;

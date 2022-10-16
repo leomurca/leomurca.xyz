@@ -2,7 +2,7 @@
 title: "How to Push to Multiple Git Remotes With One Command"
 date: 2022-10-11T16:51:53-03:00
 description: "Learn how to how to manage multiple remote repositories with git (terminal)."
-featured_image: "/img/how-to-push-to-multiple-git-remotes-with-one-command.webp"
+featured_image: "/img/how-to-push-to-multiple-git-remotes-with-one-command/featured_image.webp"
 draft: false
 ---
 

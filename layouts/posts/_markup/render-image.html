@@ -1,0 +1,17 @@
+{{ $imgPath := delimit (slice "static" (.Destination | safeURL) ) "/"}}
+
+{{ if fileExists $imgPath }}
+
+{{ $img := imageConfig $imgPath }}
+
+<picture>
+  <img src="{{ .Destination | safeURL }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ .Text }}" {{ with
+    .Title}} title="{{ . }}" {{ end }} />
+  <figcaption>Fig. {{ substr (strings.TrimSuffix (path.Ext .Destination) .Destination) -1 }} - {{ .Text }}.</figcaption>
+</picture>
+
+{{ else }}
+
+{{ errorf "Specified file at %s not found." $imgPath }}
+
+{{ end }}

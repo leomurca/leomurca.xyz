@@ -3,7 +3,7 @@ title: "How to Deploy React Applications Using Github Actions + Rsync"
 date: 2022-10-15T15:30:22-03:00
 description: "Learn how to easily deploy a react application"
 featured_image: "/img/how-to-deploy-react-applications-using-github-actions-+-rsync/featured_image.webp"
-draft: true
+draft: false
 ---
 
 Source code and deployed app used for this post:

@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-decoration: underline;
+  border-bottom: 1px solid white;
 }
 
 strong {
@@ -247,6 +247,65 @@ footer p {
   visibility: hidden;
 }
 
+/* region card*/
+
+#my-projects-section {
+  padding-top: 30px;
+}
+
+#card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 2em;
+}
+
+#card-list li {
+  border: 1px solid #fbf1c7;
+  width: 13.5em;
+  padding: 0;
+  margin: 0;
+}
+
+#card-list li:hover {
+  border: 1px solid #d79921;
+  transition: .3s;
+}
+
+#card-list li a {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#card-list li a:hover {
+  color: unset;
+}
+
+.card-title h3 {
+  text-decoration: none;
+  border: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.card-title {
+  border-bottom: 0.5px solid #fbf1c7;
+  display: flex;
+  align-items: center;
+  background-color: #26292b;
+  padding-left: 10px;
+}
+
+#card-list li p {
+  margin: 0;
+  padding: 10px;
+}
+
+/* endregion card*/
+
 /* region responsive*/
 @media only screen and (max-device-width: 812px) {
   header img {
@@ -411,6 +470,10 @@ footer p {
   footer {
     bottom: 0;
     text-align: center;
+    width: 100%;
+  }
+
+  #card-list li {
     width: 100%;
   }
 }

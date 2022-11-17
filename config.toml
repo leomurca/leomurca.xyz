@@ -36,3 +36,8 @@ copyright = "2022 Leonardo Murça All rights reserved"
   name = "Contact me"
   url = "/contact"
   weight = 3
+
+  [[menu.main]]
+  name = "Donate"
+  url = "/donate"
+  weight = 4

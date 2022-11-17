@@ -306,6 +306,13 @@ footer p {
 
 /* endregion card*/
 
+.icon {
+  width: 20px !important;
+  height: 20px !important;
+  vertical-align: text-top;
+  padding-right: 5px;
+}
+
 /* region responsive*/
 @media only screen and (max-device-width: 812px) {
   header img {

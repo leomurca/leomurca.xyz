@@ -167,11 +167,11 @@ header h1:hover {
 
 /* region pre code*/
 pre {
-  tab-size: 2;
+  tab-size: 2 !important;
   background: #282828;
-  color: #485fa0;
   padding: 20px;
   overflow-x: auto;
+  border: 1px solid #485fa0;
 }
 
 /* endregion pre code*/

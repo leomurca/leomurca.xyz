@@ -5,7 +5,7 @@ title = 'Leonardo Murça'
 enableRobotsTXT = true
 
 # Code Highlight
-pygmentsstyle = "gruvbox"
+pygmentsstyle = "github"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 

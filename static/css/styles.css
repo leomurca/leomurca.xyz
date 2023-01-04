@@ -401,7 +401,7 @@ footer p {
   .menu a {
     margin: 0;
     background-color: #5C79CF;
-    color: #1d2021;
+    color: #ffffff;
     width: 100%;
     font-weight: 600;
     text-align: center;
@@ -455,13 +455,14 @@ footer p {
   .articles-list ul {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 25px;
   }
 
   .articles-list ul li {
     flex-direction: column;
     align-items: start;
     width: 100%;
+    height: fit-content;
   }
 
   .articles-list ul li a {

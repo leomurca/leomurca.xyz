@@ -1,0 +1,20 @@
+[home]
+  other = 'Home'
+[my-name-is]
+  other="Hi, my name is"
+[home-introduction]
+  other="A passionate software engineer. I tend to make use of modern mobile and web technologies to build applications that looks great, feels fantastic, and functions correctly."
+[my-projects]
+  other="My projects"
+[posted-on]
+  other="Posted on "
+[posts]
+  other="Posts"
+[post-date-format]
+  other="Jan 2, 2006"
+[single-post-date-format]
+  other="Jan 2, 2006"
+[embroidery-viewer-title]
+  other="Embroidery Viewer"
+[embroidery-viewer-description]
+  other="A free online tool to view embroidery files."

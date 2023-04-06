@@ -1,0 +1,20 @@
+[home]
+  other = 'Página Inicial'
+[my-name-is]
+  other="Olá, meu nome é"
+[home-introduction]
+  other="Um engenheiro de software apaixonado. Costumo usar tecnologias móveis e da web modernas para criar aplicativos com ótima aparência, sensação fantástica e funcionamento correto."
+[my-projects]
+  other="Meus projetos"
+[posted-on]
+  other="Publicado em "
+[posts]
+  other="Publicações"
+[post-date-format]
+  other="2 Jan 2006"
+[single-post-date-format]
+  other="2 de January, 2006"
+[embroidery-viewer-title]
+  other="Visualizador de bordados"
+[embroidery-viewer-description]
+  other="Uma ferramenta online gratuita para visualizar arquivos de bordado."

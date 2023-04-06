@@ -1,6 +1,6 @@
 baseURL = 'https://leomurca.xyz'
-languageCode = 'en-us'
 title = 'Leonardo Murça'
+defaultContentLanguage='en'
 
 enableRobotsTXT = true
 
@@ -11,7 +11,7 @@ pygmentscodefencesguesssyntax = true
 
 # RSS Feed
 rssLimit = 20
-copyright = "2022 Leonardo Murça All rights reserved"
+copyright = "2023 Leonardo Murça All rights reserved"
 
 [params]
   description = "Leonardo Murça Webpage"
@@ -21,23 +21,53 @@ copyright = "2022 Leonardo Murça All rights reserved"
 	name = "Leonardo Murça"
 	email = "leo@leomurca.xyz"
 
-[menu]
-  [[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
+[languages]
+  [languages.en]
+    languageCode = 'en'
+    contentDir = 'content/en'
 
-  [[menu.main]]
-  name = "All posts"
-  url = "/posts"
-  weight = 2
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
 
-  [[menu.main]]
-  name = "Contact me"
-  url = "/contact"
-  weight = 3
+      [[languages.en.menu.main]]
+        name = "All posts"
+        url = "/posts"
+        weight = 2
 
-  [[menu.main]]
-  name = "Donate"
-  url = "/donate"
-  weight = 4
+      [[languages.en.menu.main]]
+        name = "Contact me"
+        url = "/contact"
+        weight = 3
+
+      [[languages.en.menu.main]]
+        name = "Donate"
+        url = "/donate"
+        weight = 4
+
+  [languages.pt-br]
+    languageCode = 'pt-br'
+    contentDir = 'content/pt-br'
+
+    [languages.pt-br.menu]
+      [[languages.pt-br.menu.main]]
+        name = "Página Inicial"
+        url = "/pt-br"
+        weight = 1
+
+      [[languages.pt-br.menu.main]]
+        name = "Publicações"
+        url = "/pt-br/posts"
+        weight = 2
+
+      [[languages.pt-br.menu.main]]
+        name = "Contato"
+        url = "/pt-br/contato"
+        weight = 3
+
+      [[languages.pt-br.menu.main]]
+        name = "Doe"
+        url = "/pt-br/doe"
+        weight = 4

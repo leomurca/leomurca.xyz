@@ -25,7 +25,7 @@ body {
   overflow-wrap: break-word;
   margin: auto;
   padding: 20px;
-  max-width: 760px;
+  max-width: 900px;
   min-height: 100vh;
   box-sizing: border-box;
   line-height: 1.5;
@@ -270,7 +270,7 @@ footer p {
 
 #card-list li {
   border: 5px solid #485fa0;
-  width: 17.5em;
+  width: 20.5em;
   padding: 0;
   margin: 0;
 }

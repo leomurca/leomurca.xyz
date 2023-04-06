@@ -1,12 +1,12 @@
 {{ define "main"}}
 <main id="main">
   <section>
-    <h1>Posts</h1>
+    <h1>{{i18n "posts" }}</h1>
     <div class="articles-list">
       <ul>
         {{ range .Pages }}
         <li>
-          <time datetime="{{ .Date }}">{{ dateFormat "Jan 2, 2006" .Date }}</time>
+          <time datetime="{{ .Date }}">{{ dateFormat (i18n "post-date-format") .Date }}</time>
           <a href="{{ .RelPermalink }}">{{ .Title }} </a>
         </li>
         {{ end }}

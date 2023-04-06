@@ -7,12 +7,9 @@
   <main id="main">
     <section class="about-me-home">
       <div class="about-me-home-left">
-        <span>Hi, my name is</span>
+        <span>{{ i18n "my-name-is"}}</span>
         <h1 class="about-me-home-name">Leonardo.</h1>
-        <p>
-          A passionate software engineer. I tend to make use of modern mobile and web technologies to build applications
-          that looks great, feels fantastic, and functions correctly.
-        </p>
+        <p>{{ i18n "home-introduction"}}</p>
         <div id="about-me-home-icons">
           <a href="https://git.leomurca.xyz/" target="_blank">
             <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/git.svg"
@@ -40,16 +37,16 @@
         alt="A picture of me smiling, wearing a blue t-shirt and a stone collar with some coconut trees behind me." />
     </section>
     <section id="my-projects-section">
-      <h2>My projects</h2>
+      <h2>{{ i18n "my-projects"}}</h2>
       <ul id="card-list">
         <li>
           <a href="https://embroideryviewer.xyz" target="_blank" rel="noreferrer">
             <div class="card-title">
               <img src="/img/embroidery-viewer-icon.svg" alt="Embroidery viewer icon." width="24" height="24" />
-              <h3>Embroidery Viewer</h3>
+              <h3>{{ i18n "embroidery-viewer-title" }}</h3>
             </div>
           </a>
-          <p tabindex="0">A free online tool to view embroidery files.</p>
+          <p tabindex="0">{{ i18n "embroidery-viewer-description" }}</p>
         </li>
       </ul>
     </section>

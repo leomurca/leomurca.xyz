@@ -8,7 +8,7 @@ draft: false
 
 ## TL;DR
 
-Create a directory called `testCommon` and add the code below to your `build.gradle` file.
+Crie um diretório chamado `testCommon` e adicione o trecho de código abaixo ao seu arquivo `build.gradle`.
 
 ```groovy
 android {
@@ -22,16 +22,16 @@ android {
 
 --- 
 
-Have you ever been in a situation where you need to access util files from both `test`
-and `androidTest` packages? If so, this article may be useful for you.
+Você já esteve em uma situação em que precisa acessar arquivos utilitários tanto do pacote `test`
+quanto do `androidTest`? Se sim, este artigo pode ser útil para você.
 
-Let's say that you have a file called `Placeholders.kt` which you use its values
-as **test doubles** for your unit tests. 
+Digamos que você tenha um arquivo chamado `Placeholders.kt` no qual você usa seus valores
+como **test doubles** para seus testes de unidade.
 
-Our test scenario in this case will be the `Success` return of the login method from an 
-use case class called `LoginUseCaseImpl`.
+Nosso cenário de teste neste caso será o retorno `Success` do método login de uma
+classe chamada `LoginUseCaseImpl`.
 
-For example:
+Por exemplo:
 
 ```kotlin
 // test/Placeholders.kt
@@ -60,9 +60,9 @@ class LoginUseCaseImplTest {
 }
 ```
 
-Now, we need to write **Instrumented Tests** using [Espresso](https://developer.android.com/training/testing/espresso/)
-to validate the complete login flow. The scenario is: when fill the email and password fields and tap the login button 
-then a success message will display.
+Agora, precisamos escrever **Testes instrumentados** usando [Espresso](https://developer.android.com/training/testing/espresso/)
+para validar o fluxo de login completo. O cenário é: ao preencher os campos de e-mail e senha e tocar no botão de login
+então uma mensagem de sucesso será exibida.
 
 ```kotlin
 // androidTest/LoginScreenInstrumentedTest.kt 
@@ -86,13 +86,13 @@ class LoginScreenInstrumentedTest {
 }
 ```
 
-By default, the espresso test will be inside the `androidTest` package but our `Placeholders.kt` 
-is available only inside the `test` package, which our `LoginUseCaseImplTest` is also located.
-So, the Instrumented Test above will not find the `Placeholders.kt`.
+Por padrão, o teste utilizando o Espresso estará dentro do pacote `androidTest`, mas nosso `Placeholders.kt`
+está disponível apenas dentro do pacote `test`, no qual nosso `LoginUseCaseImplTest` também está localizado.
+Portanto, o Teste Instrumentado acima não encontrará o `Placeholders.kt`.
 
-To allow both tests access the same file, we need to create a new package inside `src` which will place the `Placeholders.kt`.
-In this example, we'll name it as `testCommon`. After that, we need to tell gradle to consider this new package
-as a `test` and `androidTest` package. We will put the code below in our `build.gradle` file:
+Para permitir que ambos os testes acessem o mesmo arquivo, precisamos criar um novo pacote dentro do `src` que iremos colocar o `Placeholders.kt`.
+Neste exemplo, vamos nomeá-lo como `testCommon`. Depois disso, precisamos dizer ao gradle para considerar este novo pacote
+como um pacote `test` e `androidTest`. Colocaremos o código abaixo em nosso arquivo `build.gradle`:
 
 ```groovy
 android {
@@ -104,4 +104,4 @@ android {
   }
 ```
 
-That's it! Now both test packages will be able to access our `Placeholders.kt` file!
+É isso! Agora ambos os pacotes de teste poderão acessar nosso arquivo `Placeholders.kt`!

@@ -90,7 +90,7 @@ By default, the espresso test will be inside the `androidTest` package but our `
 is available only inside the `test` package, which our `LoginUseCaseImplTest` is also located.
 So, the Instrumented Test above will not find the `Placeholders.kt`.
 
-To allow both tests access the same file, we need to create a new package inside `src` which will place the `Placeholders.kt`.
+To allow both tests access the same file, we need to create a new package inside `src` which we will place the `Placeholders.kt`.
 In this example, we'll name it as `testCommon`. After that, we need to tell gradle to consider this new package
 as a `test` and `androidTest` package. We will put the code below in our `build.gradle` file:
 

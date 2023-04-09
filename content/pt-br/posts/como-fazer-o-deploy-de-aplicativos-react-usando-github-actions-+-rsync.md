@@ -6,26 +6,28 @@ featured_image: "/img/how-to-deploy-react-applications-using-github-actions-+-rs
 draft: false
 ---
 
-Source code and deployed app used for this post:
+Código fonte e aplicação em produção utilizado nesse post:
 - [rsync-deploy-react-app](https://github.com/leomurca/rsync-deploy-react-app);
 - [tutorials.leomurca.xyz/rsync-deploy-react-app](https://tutorials.leomurca.xyz/rsync-deploy-react-app/);
 
 ## TL;DR
 
-- Create a user in your server to deploy your applicaction:
+- Crie um usuário em seu servidor para fazer o deploy de sua aplicação:
 ```shell
 $ useradd -s /bin/bash -d /home/tutorials -m tutorials
 $ su tutorials
 ```
 
-- Create a folder to copy your production files to:
+- Crie um diretório para copiar seus arquivos de produção:
 ```shell
 $ mkdir rsync-deploy-react-app
 ```
 
 - Add your private tutorials's user ssh key to your [Action Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
-- Create a new github action to deploy your application and paste the code below:
+- Adicione a chave ssh privada do usuário `tutorials` aos seus [Action Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+
+- Crie uma nova action no github para fazer o deploy da sua aplicação e cole o código abaixo:
 ```yml
 # .github/workflows/deploy.yml
 name: Deploy 
@@ -58,61 +60,61 @@ jobs:
     - run: rsync -avz --progress build/ tutorials:/home/tutorials/rsync-deploy-react-app --delete
 ```
 
-Pay attention to the **Pre-requisites**. That's it! Change some code, push it to the main branch and see the magic happening!
+Preste atenção aos **Pré-requisitos**. É isso! Altere algum código, envie-o para o branch principal e veja a mágica acontecendo!
 
-## Motivation
+## Motivação 
 
-I've been working on my bachelor's thesis in information systems, which is a simple React application, and I was struggling to find a **simple, secure and fast** way to deploy it to my own [VPS](https://en.wikipedia.org/wiki/Virtual_private_server). However, most of the content that I had found on the internet involves **fancy and complex** solutions like [docker](https://www.docker.com/) and [Kubernetes](https://kubernetes.io/) or **vendor locked** solutions like [Heroku](https://www.heroku.com/) and [Vercel](https://vercel.com/).
+Estive trabalhando em minha tese de bacharelado em sistemas de informação, que é um aplicativo React simples, e estava lutando para encontrar uma maneira **simples, segura e rápida** de implantá-lo em meu próprio [VPS](https:/ /en.wikipedia.org/wiki/Virtual_private_server). No entanto, a maior parte do conteúdo que encontrei na internet envolve soluções **fantasiosas e complexas** como [docker](https://www.docker.com/) e [Kubernetes](https://kubernetes.io /) ou soluções **bloqueadas pelo fornecedor** como [Heroku](https://www.heroku.com/) e [Vercel](https://vercel.com/).
 
-I recognize these tools have their advantages, but have found that for small to medium sized projects they are more effort than they are worth to maintain. All I need to do is build the code and copy the built files to the server. Then, [rsync](https://en.wikipedia.org/wiki/Rsync) came to my knowledge.
+Reconheço que essas ferramentas têm suas vantagens, mas descobri que, para projetos de pequeno e médio porte, elas exigem mais esforço do que vale a pena manter. Tudo o que preciso fazer é criar o código e copiar os arquivos criados para o servidor. Então, [rsync](https://en.wikipedia.org/wiki/Rsync) chegou ao meu conhecimento.
 
-## Pre-requisites
+## Pré-requisitos
 
-- An existing React Application;
-- An server or a hosting service to deploy your application;
-- Your own domain registered;
-- [NGINX](https://www.nginx.com/) installed in your server;
-- Some knowledge about how to register a domain and create a server on some hosting platform (I'll add articles about that in the future).
+- Uma aplicação React existente;
+- Um servidor ou um serviço de hospedagem para fazer o deploy de sua aplicação;
+- Seu próprio domínio registrado;
+- [NGINX](https://www.nginx.com/) instalado em seu servidor;
+- Algum conhecimento sobre como registrar um domínio e criar um servidor em alguma plataforma de hospedagem (adicionarei artigos sobre isso no futuro).
 
-## Demo App to Deploy
+## Aplicativo de demonstração a ser implantado
 
-I've created an demo app to deploy it to my server. Its source code is available at [rsync-deploy-react-app](https://github.com/leomurca/rsync-deploy-react-app).
+Criei um aplicativo de demonstração para fazer o deploy em meu servidor. Seu código-fonte está disponível em [rsync-deploy-react-app](https://github.com/leomurca/rsync-deploy-react-app).
 
-![React Application Screenshot](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/app-screenshot-1.webp)
+![Screenshot da aplicação escrita em React](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/app-screenshot-1.webp)
 
-## Server Setup
+## Setup do servidor
 
-For this tutorial, I'll use my domain `leomurca.xyz` setting up a sub-domain for it. To be more specific, I'll point `tutorial.leomurca.xyz` to my **VPS's** IP: `45.76.5.44`.
+Para este tutorial, usarei meu domínio `leomurca.xyz` configurando um subdomínio para ele. Para ser mais específico, vou apontar `tutorial.leomurca.xyz` para o IP do meu **VPS**: `45.76.5.44`.
 
-### SSH to your server
+### Logar no servidor via SSH 
 
 ```shell
 $ ssh root@45.76.5.44
 ```
 
-### Create a user to manage your application
+### Crie um usuário para gerenciar sua aplicação
 
-To prevent our pipeline to have root access to your server, I'll create a user to manage deployments called `tutorials`:
+Para evitar que nosso pipeline tenha acesso root ao seu servidor, criarei um usuário para gerenciar deploys chamado `tutorials`:
 
 ```shell
 $ useradd -s /bin/bash -d /home/tutorials -m tutorials
 ```
 
-After that, change the user to it:
+Depois disso, logue como o usuário criado:
 
 ```shell
 $ su tutorials
 ```
 
-As I created the user named `tutorials`, this user will host for multiple tutorials, so in order to isolate our application, create a specific folder to house our build files:
+Como criei o usuário chamado `tutorials`, este usuário irá hospedar vários tutoriais, então para isolarmos nossa aplicação, crie uma pasta específica para abrigar nossos arquivos de build:
 
 ```shell
 $ mkdir rsync-deploy-react-app
 ```
 
-## Github Action Setup
+## Setup da Github Action 
 
-Now let's create the `.github/workflows/deploy.yml` to define the pipeline steps. First, add the label for the workflow and when it should be triggered:
+Agora vamos criar o `.github/workflows/deploy.yml` para definir as etapas do pipeline. Primeiro, adicione uma label para o fluxo de trabalho e quando ele deve ser acionado:
 
 ```yml
 name: Deploy
@@ -122,9 +124,9 @@ on:
     branches: [ "main" ]
 ```
 
-Above, the workflow will be trigered every time that new code is **pushed** or **merged** to the `main` branch (This happens for Pull Requests merged to the main branch too).
+Acima, o workflow será acionado toda vez que um novo código for **pushed** ou **merged** à branch `main` (isso também acontece para Pull Requests mergeadas à branch principal).
 
-Then, describe a new job that we will name it as `build-and-deploy` to handle all the steps to build and deploy our app:
+Em seguida, descreva um novo workflow que vamos nomear como `build-and-deploy` para lidar com todas as etapas para fazer o build e o deploy de nossa aplicação:
 
 ```yml
 jobs:
@@ -139,11 +141,11 @@ jobs:
 
 ``` 
 
-The `SSH_KEY: ${{secrets.SSH_KEY}}` references [Github Secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets) that is allowed to login in our server. It's important to mention that we should add the secret to our repository settings. 
+A `SSH_KEY: ${{secrets.SSH_KEY}}` faz referência a [Github Secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets) que é permitido fazer login em nosso servidor. É importante mencionar que devemos adicionar o secrete às configurações do nosso repositório.
 
-Also, to avoid issues when authenticating to your server using ssh, **use RSA generated keys to authenticate instead of Ed25519 keys**. For more details on that, check this doc on [how to generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+Além disso, para evitar problemas ao autenticar em seu servidor usando ssh, **use chaves geradas por RSA para autenticar em vez de chaves Ed25519**. Para mais detalhes sobre isso, verifique este documento sobre  [como gerar uma nova chave SSH](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-Afterwards, we'll start define the actual steps to be executed:
+Depois, vamos começar a definir os passos reais a serem executados:
 
 ```yml
     ...
@@ -157,9 +159,9 @@ Afterwards, we'll start define the actual steps to be executed:
     ...
 ```
 
-These first steps will basically define which [NodeJS](https://nodejs.org/en/) version will be used in our pipeline.
+Essas primeiras etapas basicamente definirão qual versão do [NodeJS](https://nodejs.org/en/) será usada em nosso pipeline.
 
-And now, a very important step is to add the commands that will actually be executed in our workflow, pay attention to them:
+E agora, um passo muito importante é adicionar os comandos que realmente serão executados em nosso workflow, preste atenção neles:
 
 ```yml
     ...
@@ -172,12 +174,12 @@ And now, a very important step is to add the commands that will actually be exec
     ...
 ```
 
-The configs above we basically:
-- Copy the `SSH_KEY` to a file;
-- Create an ssh config to our server using the key created before;
-- Download the app dependencies and generate the build files to be copied to our server.
+As configurações acima nós basicamente:
+- Copiamos a `SSH_KEY` para um arquivo;
+- Criamos uma configuração ssh para nosso servidor usando a chave criada anteriormente;
+- Baixamos as dependências do aplicativo e gere os arquivos de compilação para serem copiados para o nosso servidor.
 
-To make the ssh configs more readable, check the code snippet below:
+Para tornar as configurações do ssh mais legíveis, verifique o trecho de código abaixo:
 ```shell
 Host tutorials
   User tutorials
@@ -186,9 +188,9 @@ Host tutorials
   StrictHostKeyChecking No
 ```
 
-### Using rsync to deploy to the server
+### Usando rsync para fazer o deploy no servidor
 
-And finally, add the rsync command to sync the files from the `build/` folder to our server:
+E, finalmente, adicione o comando rsync para sincronizar os arquivos da pasta `build/` para o nosso servidor:
 
 ```yml
 ...
@@ -196,16 +198,16 @@ And finally, add the rsync command to sync the files from the `build/` folder to
 ...
 ```
 
-The meaning of each flag used are:
-- `-a`: It is a quick way of saying you want recursion and want to preserve almost everything (with -H being a notable omission);
-- `-v` (`-verbose`): This option increases the amount of information the daemon logs during its startup phase.
-- `-z` (`-compress`): compresses the file data as it is sent to the destination machine, which reduces the amount of data being transmitted -- something that is useful over a slow connection.
-- `--progress`: This option tells rsync to print information showing the progress of the transfer. This gives a bored user something to watch.
-- `--delete`: This tells rsync to delete extraneous files from the receiving side (ones that aren't on the sending side), but only for the directories that are being synchronized.
+O significado de cada flag utilizada são:
+- `-a`: É uma maneira rápida de dizer que você quer recursão e quer preservar quase tudo (com -H sendo uma omissão notável);
+- `-v` (`-verbose`): Esta opção aumenta a quantidade de informações que o daemon registra durante sua fase de inicialização.
+- `-z` (`-compress`): comprime os dados do arquivo à medida que são enviados para a máquina de destino, o que reduz a quantidade de dados sendo transmitidos -- algo que é útil em uma conexão lenta.
+- `--progress`: Esta opção diz ao rsync para imprimir informações mostrando o progresso da transferência. Isso dá a um usuário entediado algo para assistir.
+- `--delete`: Diz ao rsync para excluir arquivos estranhos do lado receptor (aqueles que não estão no lado remetente), mas apenas para os diretórios que estão sendo sincronizados.
 
-To have more details on all the options for `rsync`, check its [man page](https://linux.die.net/man/1/rsync).
+Para obter mais detalhes sobre todas as opções do `rsync`, consulte sua [man page](https://linux.die.net/man/1/rsync).
 
-### Complete `.github/workflows/deploy.yml`
+### Arquivo completo `.github/workflows/deploy.yml`
 
 ```yml
 name: Deploy 
@@ -238,14 +240,12 @@ jobs:
     - run: rsync -avz --progress build/ tutorials:/home/tutorials/rsync-deploy-react-app --delete
 ```
 
-That's it! Change some code, push it to the main branch and see the magic happening!
+É isso! Altere algum código, envie-o para o branch principal e veja a mágica acontecendo!
 
-![Github action screenshot](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/github-action-screenshot-2.webp)
+![Captura de tela da action no Github](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/github-action-screenshot-2.webp)
 
-Also, if you want to have more details on the action steps, please check the [actions-executed](https://github.com/leomurca/rsync-deploy-react-app/actions) during this article.
+Além disso, se você quiser obter mais detalhes sobre as etapas da ação, verifique as [ações executadas](https://github.com/leomurca/rsync-deploy-react-app/actions) durante este artigo.
 
-## Conclusion
+**Simples, rápido e seguro**, esses são os principais benefícios de usar o fluxo de trabalho mencionado neste tutorial. É realmente um alívio ter esse tipo de ferramenta no meio de tantas soluções inchadas.
 
-**Simple, fast and secure**, that are the main benefits of using the workflow mentioned in this tutorial. It's really a relief to have these kind of tools in the middle of many bloated solutions. 
-
-If you have any questions or topics to talk about, please [reach me out](/contact)!
+Se você tiver alguma dúvida ou assunto para falar, por favor, [fale comigo](/contato)!

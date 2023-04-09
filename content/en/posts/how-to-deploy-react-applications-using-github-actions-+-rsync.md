@@ -12,7 +12,7 @@ Source code and deployed app used for this post:
 
 ## TL;DR
 
-- Create a user in your server to deploy your applicaction:
+- Create a user in your server to deploy your application:
 ```shell
 $ useradd -s /bin/bash -d /home/tutorials -m tutorials
 $ su tutorials
@@ -173,9 +173,9 @@ And now, a very important step is to add the commands that will actually be exec
 ```
 
 The configs above we basically:
-- Copy the `SSH_KEY` to a file;
-- Create an ssh config to our server using the key created before;
-- Download the app dependencies and generate the build files to be copied to our server.
+- Copied the `SSH_KEY` to a file;
+- Created an ssh config to our server using the key created before;
+- Downloaded the app dependencies and generate the build files to be copied to our server.
 
 To make the ssh configs more readable, check the code snippet below:
 ```shell

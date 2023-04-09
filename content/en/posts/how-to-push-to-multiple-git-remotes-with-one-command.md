@@ -60,11 +60,11 @@ To github.com:leomurca/gh-remote.git
 
 ## Introduction
 
-This tutorial is pretty straightforward on how to simplify the syncronization across multiple git remotes, I recommend to save it to your bookmark if you forget any steps.
+This tutorial is pretty straightforward on how to simplify the synchronization across multiple git remotes, I recommend to save it to your bookmark if you forget any steps.
 
 ## Why to push to multiple git remotes?
 
-The main use case for pusing to multiple git remotes is to syncronize your changes among all the mirrors used as redundancy for your project. If that is your case (or event if it isn't but you want to learn something new), let's dive in.
+The main use case for pusing to multiple git remotes is to synchronize your changes among all the mirrors used as redundancy for your project. If that is your case (or even if it isn't but you want to learn something new), let's dive in.
 
 ## Adding multiple remotes
 

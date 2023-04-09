@@ -6,37 +6,37 @@ featured_image: "/img/how-to-push-to-multiple-git-remotes-with-one-command/featu
 draft: false
 ---
 
-Repositories used for the tutorial: 
+Repositório utilizados neste tutorial:
 - [gh-remote](https://github.com/leomurca/gh-remote);
 - [gl-remote](https://gitlab.com/leomurca/gl-remote.git).
 
 ## TL;DR
-- Clone the primary repository ([gh-remote](https://github.com/leomurca/gh-remote));
+- Clone repositório primário ([gh-remote](https://github.com/leomurca/gh-remote));
 
 ```shell
 $ git clone git@github.com:leomurca/gh-remote.git
 ```
 
-- Add the secondary remote ([gl-remote](https://gitlab.com/leomurca/gl-remote.git)) to the cloned folder;
+- Adicione o remote do repositório secundário ([gl-remote](https://gitlab.com/leomurca/gl-remote.git)) ao diretório clonado;
 
 ```shell
 $ git remote add gitlab git@gitlab.com:leomurca/gl-remote.git
 ```
 
-- Add a third remote that will be used to push to all the remotes at the same time. For conveniece, we'll name it as `all`. Also, as the url, we'll use the value `fetch-not-supported`;
+- Adicione um terceiro remote que será utilizado para fazer o push para todos os remotes ao mesmo tempo. Por conveniência, vamos nomeá-lo como `all`. Além disso, nomeie sua url como `fetch-not-supported`;
 
 ```shell
 $ git remote add all fetch-not-supported
 ```
 
-- Add the remotes that you want your code to be pushed when `git push all <BRANCH>` is executed;
+- Adicione os remotes que você deseja que seu código seja enviado quando `git push all <BRANCH>` for executado;
 
 ```shell
 $ git remote set-url --add --push all git@gitlab.com:leomurca/gl-remote.git
 $ git remote set-url --add --push all git@github.com:leomurca/gh-remote.git
 ```
 
-- And finally to test if it is working, change some code locally, run the command below and check your both remotes (Be aware of the branch that you are using. In our example, we are using the `main` branch).
+- E, finalmente, para testar se está funcionando, altere algum código localmente, execute o comando abaixo e verifique seus dois remotes (esteja ciente da branch que você está usando. Em nosso exemplo, estamos usando o branch `main`).
 
 ```shell
 $ git push all main
@@ -58,25 +58,25 @@ To github.com:leomurca/gh-remote.git
 
 ---
 
-## Introduction
+## Introdução
 
-This tutorial is pretty straightforward on how to simplify the syncronization across multiple git remotes, I recommend to save it to your bookmark if you forget any steps.
+Este tutorial é bem direto sobre como simplificar a sincronização entre vários remotes git, recomendo salvá-lo em seus favoritos caso esqueça alguma etapa.
 
-## Why to push to multiple git remotes?
+## Por que fazer o psuh para múltiplos remotes git?
 
-The main use case for pusing to multiple git remotes is to syncronize your changes among all the mirrors used as redundancy for your project. If that is your case (or event if it isn't but you want to learn something new), let's dive in.
+O principal caso de uso para usar vários remotes git é sincronizar suas alterações entre todos os espelhos usados como redundância para seu projeto. Se esse for o seu caso (ou mesmo se não for, mas você quer aprender algo novo), vamos mergulhar de cabeça.
 
-## Adding multiple remotes
+## Adicionando múltiplos remotes
 
-First of all, you need to have the primary git repository cloned to your local machine. You can also start by creating a local repository and then pushing to a remote, but for this tutorial, we'll keep it simple. So, let's clone our primary repository, which in this case, is the [gh-remote](https://github.com/leomurca/gh-remote).
+Primeiro de tudo, você precisa ter o repositório git primário clonado em sua máquina local. Você também pode começar criando um repositório local e, em seguida, enviar para um remoto, mas para este tutorial, vamos simplificar. Então, vamos clonar nosso repositório primário, que no caso é o [gh-remote](https://github.com/leomurca/gh-remote).
 
-### Cloning the repo (with the primary remote)
+### Clonando o repositório (com o remote primário)
 
 ```shell
 $ git clone git@github.com:leomurca/gh-remote.git
 ```
 
-After cloning it, check the default remote assigned to it.
+Depois de cloná-lo, verifique o remote padrão atribuído a ele.
 
 ```shell
 $ git remote -v
@@ -84,9 +84,11 @@ origin  git@github.com:leomurca/gh-remote.git (fetch)
 origin  git@github.com:leomurca/gh-remote.git (push)
 ```
 
-### Adding a second remote
+### Adicionando um segundo remote
 
 You can notice that the default remote name assigned to the primary repo was `origin`, but you can also change it in the future. Right, now let's just add the second remote ([gl-remote](https://gitlab.com/leomurca/gl-remote.git)) to the cloned folder and then list all the remotes afterwards;
+
+Você pode notar que o nome padrão do remote atribuído ao repositório primário era `origin`, mas também pode alterá-lo no futuro. Certo, agora vamos apenas adicionar o segundo remote ([gl-remote](https://gitlab.com/leomurca/gl-remote.git)) na pasta clonada e depois listar todos os controles remotos;
 
 ```shell
 $ git remote add gitlab git@gitlab.com:leomurca/gl-remote.git
@@ -97,8 +99,8 @@ origin  git@github.com:leomurca/gh-remote.git (fetch)
 origin  git@github.com:leomurca/gh-remote.git (push)
 ```
 
-### Adding a third remote (push only)
-We'll add a third remote that will be used to push to all the remotes at the same time. For conveniece, we'll name it as `all`. Also, as the url, we'll use the value `fetch-not-supported`. After that, list the remotes.
+### Adicionando um terceiro remote (somente push)
+Adicionaremos um terceiro remote que será usado para enviar para todos os remotes ao mesmo tempo. Por conveniência, vamos nomeá-lo como `all`. Além disso, como url, usaremos o valor `fetch-not-supported`. Depois disso, liste os remotes.
 
 ```shell
 $ git remote add all fetch-not-supported
@@ -111,16 +113,16 @@ origin  git@github.com:leomurca/gh-remote.git (fetch)
 origin  git@github.com:leomurca/gh-remote.git (push)
 ```
 
-And finally, we'll add the remotes that we want our code to be pushed when `git push all <BRANCH>` is executed;
+E, finalmente, adicionaremos os remotes que queremos que nosso código seja enviado quando `git push all <BRANCH>` for executado;
 
 ```shell
 $ git remote set-url --add --push all git@gitlab.com:leomurca/gl-remote.git
 $ git remote set-url --add --push all git@github.com:leomurca/gh-remote.git
 ```
 
-## List all remotes
+## Liste todos os remotes 
 
-Let's see the final result listing all the remotes added before.
+Vamos ver o resultado final listando todos os remotes adicionados anteriormente.
 
 ```shell
 $ git remote -v
@@ -133,9 +135,11 @@ origin  git@github.com:leomurca/gh-remote.git (fetch)
 origin  git@github.com:leomurca/gh-remote.git (push)
 ```
 
-## Pushing to multiple remotes
+## Fazendo push para múltiplos remotes 
 
 And now that everything is set up, let's test if it is working: change some code locally, run the command below and check your both remotes (Be aware of the branch that you are using. In our example, we are using the `main` branch).
+
+E agora que tudo está configurado, vamos testar se está funcionando: altere algum código localmente, execute o comando abaixo e verifique seus dois remotes (Fique atento à branch que você está usando. Em nosso exemplo, estamos usando a branch main `main `).
 
 ```shell
 $ git push all main
@@ -155,8 +159,8 @@ To github.com:leomurca/gh-remote.git
    7e0fb66..1a17aa1  main -> main
 ```
 
-That's all! Enjoy your new git configuration.
+Isso é tudo! Aproveite sua nova configuração git.
 
 ## Extra
 
-Do want to fetch from multiple remotes? Just execute `git fetch --all`.
+Quer fazer um fetch de vários remotes? Basta executar `git fetch --all`.

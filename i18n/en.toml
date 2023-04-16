@@ -1,5 +1,7 @@
 [home]
   other = 'Home'
+[home-page-description]
+  other="Leonardo Murça Webpage"
 [my-name-is]
   other="Hi, my name is"
 [home-introduction]
@@ -18,3 +20,11 @@
   other="Embroidery Viewer"
 [embroidery-viewer-description]
   other="A free online tool to view embroidery files."
+[copyright]
+  other="Leonardo Murça All rights reserved"
+[rss-description-recent-content]
+  other="Recent content"
+[rss-in]
+  other="in"
+[rss-on]
+  other="on"

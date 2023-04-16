@@ -11,10 +11,10 @@ pygmentscodefencesguesssyntax = true
 
 # RSS Feed
 rssLimit = 20
-copyright = "2023 Leonardo Murça All rights reserved"
+copyright = "copyright"
 
 [params]
-  description = "Leonardo Murça Webpage"
+  description = "home-page-description"
   featured_image = "/img/avatar.webp"
 
 [author]

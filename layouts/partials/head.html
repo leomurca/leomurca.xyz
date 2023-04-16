@@ -12,7 +12,8 @@
   {{ end -}}
 
   <meta charset="utf-8" />
-  <meta name="description" content="{{ if $.IsHome }}{{ $.Site.Params.description }}{{else}}{{$.Description}}{{end}}" />
+  <meta name="description"
+    content="{{ if $.IsHome }}{{ i18n $.Site.Params.description }}{{else}}{{$.Description}}{{end}}" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Leonardo Murça" />
 
@@ -22,7 +23,7 @@
   <meta property="og:title"
     content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}">
   <meta property="og:description"
-    content="{{ if $.IsHome }}{{ $.Site.Params.description }}{{else}}{{$.Description}}{{end}}" />
+    content="{{ if $.IsHome }}{{ i18n $.Site.Params.description }}{{else}}{{$.Description}}{{end}}" />
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
   {{ if .Params.featured_image }}

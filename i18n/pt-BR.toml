@@ -1,5 +1,7 @@
 [home]
   other = 'Página Inicial'
+[home-page-description]
+  other="Webpage de Leonardo Murça"
 [my-name-is]
   other="Olá, meu nome é"
 [home-introduction]
@@ -18,3 +20,11 @@
   other="Visualizador de bordados"
 [embroidery-viewer-description]
   other="Uma ferramenta online gratuita para visualizar arquivos de bordado."
+[copyright]
+  other="Leonardo Murça todos os direitos reservados."
+[rss-description-recent-content]
+  other="Últimos"
+[rss-in]
+  other=" "
+[rss-on]
+  other="de"

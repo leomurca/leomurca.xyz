@@ -12,6 +12,7 @@
   src: url("../font/roboto-mono-bold.woff2") format("woff2"),
     url("../font/roboto-mono-bold.woff") format("woff");
   font-weight: bold;
+  font-display: swap
 }
 
 body {

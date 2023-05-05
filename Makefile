@@ -12,7 +12,7 @@ init:
 
 build: clean
 	echo "Making $@"
-	hugo
+	hugo --minify
 
 deploy: build
 	echo "Making $@"

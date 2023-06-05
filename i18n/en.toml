@@ -5,9 +5,11 @@
 [my-name-is]
   other="Hi, my name is"
 [home-introduction]
-  other="A passionate software engineer. I tend to make use of modern mobile and web technologies to build applications that looks great, feels fantastic, and functions correctly."
+  other="I write good software that looks great, feels fantastic, and functions correctly. Web and Android development are my expeciallities. Reach me out!"
 [my-projects]
-  other="My projects"
+  other="Projects"
+[my-projects-description]
+  other="Freelance and side projects."
 [posted-on]
   other="Posted on "
 [posts]
@@ -19,7 +21,11 @@
 [embroidery-viewer-title]
   other="Embroidery Viewer"
 [embroidery-viewer-description]
-  other="A free online tool to view embroidery files."
+  other="A free online tool to view embroidery files built with Svelte."
+[vumbora-startups-title]
+  other="Vum Bora Startups"
+[vumbora-startups-description]
+  other="Landing page and a CMS for a project that capacitates, axcelerates and reward business with growth potential."
 [copyright]
   other="Leonardo Murça All rights reserved"
 [rss-description-recent-content]

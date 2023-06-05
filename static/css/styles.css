@@ -26,7 +26,8 @@ body {
   overflow-wrap: break-word;
   margin: auto;
   padding: 20px;
-  max-width: 900px;
+  max-width: 60%;
+  max-width: 960px;
   min-height: 100vh;
   box-sizing: border-box;
   line-height: 1.5;
@@ -269,48 +270,36 @@ footer p {
   gap: 2em;
 }
 
-#card-list li {
-  border: 5px solid #485fa0;
-  width: 20.5em;
-  padding: 0;
-  margin: 0;
+#card-list a {
+  width: 400px;
+  padding: 20px;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-duration: .6s;
+  border-bottom: none;
 }
 
-#card-list li:hover {
-  border: 5px solid #1d2021;
+#card-list a h3 {
+  border-bottom: none;
+  padding: 0;
+  margin: 10px 0;
+  color: black;
+}
+
+#card-list a:hover {
+  color: unset;
+  background-color: #adb6ce;
   transition: .3s;
 }
 
-#card-list li a {
-  width: 100%;
-  height: 100%;
+#card-list img {
+  border-bottom: 2px solid #5C79CF;
+}
+
+#card-list a p {
+  margin: 0;
   padding: 0;
-  margin: 0;
-}
-
-#card-list li a:hover {
-  color: unset;
-}
-
-.card-title h3 {
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  padding: 10px;
-  margin: 0;
-}
-
-.card-title {
-  border-bottom: 5px solid #485fa0;
-  display: flex;
-  align-items: center;
-  background-color: #f7f7f7;
-  padding-left: 10px;
-}
-
-#card-list li p {
-  margin: 0;
-  padding: 10px;
+  color: black;
 }
 
 /* endregion card*/
@@ -324,6 +313,12 @@ footer p {
 
 /* region responsive*/
 @media only screen and (max-device-width: 812px) {
+
+  body {
+    width: 90%;
+
+  }
+
   header img {
     width: 120px;
     height: 120px;
@@ -489,7 +484,15 @@ footer p {
     width: 100%;
   }
 
-  #card-list li {
+  #card-list {
+    width: 100%;
+  }
+
+  #card-list a {
+    width: 100%;
+  }
+
+  #card-list img {
     width: 100%;
   }
 }

@@ -5,9 +5,11 @@
 [my-name-is]
   other="Olá, meu nome é"
 [home-introduction]
-  other="Um engenheiro de software apaixonado. Costumo usar tecnologias móveis e da web modernas para criar aplicativos com ótima aparência, sensação fantástica e funcionamento correto."
+  other="Desenvolvo softwares com ótima aparência, sensação fantástica e funcionamento correto. Minhas especialidades são desenvolvimento Web e Android. Entre em contato comigo!"
 [my-projects]
-  other="Meus projetos"
+  other="Projetos"
+[my-projects-description]
+  other="Freelance e projetos paralelos."
 [posted-on]
   other="Publicado em "
 [posts]
@@ -19,7 +21,11 @@
 [embroidery-viewer-title]
   other="Visualizador de bordados"
 [embroidery-viewer-description]
-  other="Uma ferramenta online gratuita para visualizar arquivos de bordado."
+  other="Uma ferramenta online gratuita para visualizar arquivos de bordado escrita com Svelte."
+[vumbora-startups-title]
+  other="Vum Bora Startups"
+[vumbora-startups-description]
+  other="Landing page e um CMS para um projeto que capacita, acelera e recompensa negócios com potencial de crescimento."
 [copyright]
   other="Leonardo Murça todos os direitos reservados."
 [rss-description-recent-content]

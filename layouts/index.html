@@ -39,17 +39,23 @@
     </section>
     <section id="my-projects-section">
       <h2>{{ i18n "my-projects"}}</h2>
-      <ul id="card-list">
-        <li>
-          <a href="https://embroideryviewer.xyz" target="_blank" rel="noreferrer">
-            <div class="card-title">
-              <img src="/img/embroidery-viewer-icon.svg" alt="Embroidery viewer icon." width="24" height="24" />
-              <h3>{{ i18n "embroidery-viewer-title" }}</h3>
-            </div>
-          </a>
+      <p>{{i18n "my-projects-description" }}</p>
+      <div id="card-list">
+        <a href="https://embroideryviewer.xyz" target="_blank" rel="noreferrer">
+          <img src="/img/embroidery-viewer-screenshot.webp" alt="Embroidery viewer screenshot." width="400">
+          <h3>{{
+            i18n "embroidery-viewer-title" }}
+          </h3>
           <p tabindex="0">{{ i18n "embroidery-viewer-description" }}</p>
-        </li>
-      </ul>
+        </a>
+        <a href="https://vumborastartups.com.br" target="_blank" rel="noreferrer">
+          <img src="/img/vumbora-startups-screenshot.webp" alt="Vumbora Startups screenshot." width="400">
+          <h3>{{
+            i18n "vumbora-startups-title" }}
+          </h3>
+          <p tabindex="0">{{ i18n "vumbora-startups-description" }}</p>
+        </a>
+      </div>
     </section>
   </main>
   {{ partial "footer.html" . }}

@@ -1,10 +1,13 @@
 ---
 title: "Como fazer push para múltiplos repositórios no git com apenas 1 comando"
 date: 2022-10-11T16:51:53-03:00
+lastmod: 2024-03-24
 description: "Aprenda como fazer push para múltiplos repositórios no git com apenas 1 comando (terminal)."
 featured_image: "/img/how-to-push-to-multiple-git-remotes-with-one-command/featured_image.webp"
 draft: false
 ---
+
+![Rosas amarelas](/img/how-to-push-to-multiple-git-remotes-with-one-command/cover-image-1.webp)
 
 Repositório utilizados neste tutorial:
 - [gh-remote](https://github.com/leomurca/gh-remote);

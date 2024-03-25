@@ -5,7 +5,7 @@ defaultContentLanguage='en'
 enableRobotsTXT = true
 
 # Code Highlight
-pygmentsstyle = "github"
+pygmentsstyle = "gruvbox"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 

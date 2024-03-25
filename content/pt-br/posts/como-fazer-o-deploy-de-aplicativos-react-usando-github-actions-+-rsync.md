@@ -1,10 +1,13 @@
 ---
 title: "Como fazer o deploy de aplicativos React usando Github Actions + Rsync"
 date: 2022-10-15T15:30:22-03:00
+lastmod: 2024-03-24
 description: "Aprenda como fazer o deploy de aplicativos React usando Github Actions + Rsync"
 featured_image: "/img/how-to-deploy-react-applications-using-github-actions-+-rsync/featured_image.webp"
 draft: false
 ---
+
+![Gato com olhos amarelos](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/cover-image-1.webp)
 
 Código fonte e aplicação em produção utilizado nesse post:
 - [rsync-deploy-react-app](https://github.com/leomurca/rsync-deploy-react-app);
@@ -80,7 +83,7 @@ Reconheço que essas ferramentas têm suas vantagens, mas descobri que, para pro
 
 Criei um aplicativo de demonstração para fazer o deploy em meu servidor. Seu código-fonte está disponível em [rsync-deploy-react-app](https://github.com/leomurca/rsync-deploy-react-app).
 
-![Screenshot da aplicação escrita em React](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/app-screenshot-1.webp)
+![Screenshot da aplicação escrita em React](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/app-screenshot-2.webp)
 
 ## Setup do servidor
 
@@ -242,7 +245,7 @@ jobs:
 
 É isso! Altere algum código, envie-o para o branch principal e veja a mágica acontecendo!
 
-![Captura de tela da action no Github](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/github-action-screenshot-2.webp)
+![Captura de tela da action no Github](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/github-action-screenshot-3.webp)
 
 Além disso, se você quiser obter mais detalhes sobre as etapas da ação, verifique as [ações executadas](https://github.com/leomurca/rsync-deploy-react-app/actions) durante este artigo.
 

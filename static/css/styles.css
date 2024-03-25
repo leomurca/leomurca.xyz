@@ -301,6 +301,13 @@ footer p {
 .posted-on {
   font-style: italic;
   color: #2f3335;
+  margin-bottom: 0;
+}
+
+.last-update {
+  margin-top: 0;
+  font-style: italic;
+  color: #2f3335;
 }
 
 /* "Hide" checkbox -- moves it off screen*/

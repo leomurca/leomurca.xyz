@@ -2,7 +2,10 @@
 <main id="main">
   <article>
     <h1 class="title">{{ .Title }}</h1>
-    <p class="posted-on">{{ i18n "posted-on"}}{{ dateFormat (i18n "single-post-date-format") .Date }}</p>
+    <p class="posted-on"><strong>{{ i18n "posted-on"}}</strong>{{ dateFormat (i18n "single-post-date-format") .Date }}</p>
+    {{ if ne .Date .Lastmod }}
+      <p class="last-update"><strong>{{ i18n "last-update"}}</strong>{{ dateFormat (i18n "single-post-date-format") .Lastmod }}</p>
+    {{ end }}
     <section class="body">
       {{ .Content }}
     </section>

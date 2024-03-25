@@ -1,10 +1,13 @@
 ---
 title: "Como acessar arquivos de teste de diferentes pacotes de teste (Unit e Instrumented) em Android"
 date: 2022-02-19
+lastmod: 2024-03-24
 description: "Aprenda como acessar arquivos de teste de diferentes pacotes de teste (Unit e Instrumented) em Android."
 featured_image: "/img/how-to-access-test-only-files-from-unit-and-instrumented-test-packages/featured_image.webp"
 draft: false 
 ---
+
+![Arara-canindé com uma asa aberta](/img/how-to-access-test-only-files-from-unit-and-instrumented-test-packages/cover-image-1.webp)
 
 ## TL;DR
 

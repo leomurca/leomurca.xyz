@@ -1,12 +1,15 @@
 ---
 title: "How to Push to Multiple Git Remotes With One Command"
 date: 2022-10-11T16:51:53-03:00
+lastmod: 2024-03-24
 description: "Learn how to how to manage multiple remote repositories with git (terminal)."
 featured_image: "/img/how-to-push-to-multiple-git-remotes-with-one-command/featured_image.webp"
 draft: false
 ---
 
+![Yellow roses](/img/how-to-push-to-multiple-git-remotes-with-one-command/cover-image-1.webp)
 Repositories used for the tutorial: 
+
 - [gh-remote](https://github.com/leomurca/gh-remote);
 - [gl-remote](https://gitlab.com/leomurca/gl-remote.git).
 

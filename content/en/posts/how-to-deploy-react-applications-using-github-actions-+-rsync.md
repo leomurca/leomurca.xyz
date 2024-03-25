@@ -1,10 +1,13 @@
 ---
 title: "How to Deploy React Applications Using Github Actions + Rsync"
 date: 2022-10-15T15:30:22-03:00
+lastmod: 2024-03-24
 description: "Learn how to easily deploy a react application"
 featured_image: "/img/how-to-deploy-react-applications-using-github-actions-+-rsync/featured_image.webp"
 draft: false
 ---
+
+![Cat with yellow eyes](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/cover-image-1.webp)
 
 Source code and deployed app used for this post:
 - [rsync-deploy-react-app](https://github.com/leomurca/rsync-deploy-react-app);
@@ -78,7 +81,7 @@ I recognize these tools have their advantages, but have found that for small to 
 
 I've created an demo app to deploy it to my server. Its source code is available at [rsync-deploy-react-app](https://github.com/leomurca/rsync-deploy-react-app).
 
-![React Application Screenshot](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/app-screenshot-1.webp)
+![React Application Screenshot](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/app-screenshot-2.webp)
 
 ## Server Setup
 
@@ -240,7 +243,7 @@ jobs:
 
 That's it! Change some code, push it to the main branch and see the magic happening!
 
-![Github action screenshot](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/github-action-screenshot-2.webp)
+![Github action screenshot](/img/how-to-deploy-react-applications-using-github-actions-+-rsync/github-action-screenshot-3.webp)
 
 Also, if you want to have more details on the action steps, please check the [actions-executed](https://github.com/leomurca/rsync-deploy-react-app/actions) during this article.
 

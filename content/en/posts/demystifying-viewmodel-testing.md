@@ -98,12 +98,12 @@ class UserProfileViewModel(
 ```
 
 ### 2. Large ViewModels
-A large class is a well-known code smell for classes that have too many
-responsibilities. That's not different for ViewModels. ViewModel's only
+A large class is a well-known [code smell](https://martinfowler.com/bliki/CodeSmell.html) 
+for classes that have too many responsibilities. That's not different for ViewModels. ViewModel's only
 responsibility is to manage the data for the UI. Having overly large ViewModels
 with too many responsibilities can make code hard to understand, test, and
-maintain. Be mindful that following the SRP is fundamental for ViewModels too.
-See the example below with too many responsibilities for a single ViewModel:
+maintain. Be mindful that following the [SRP](https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html) 
+is fundamental for ViewModels too. See the example below with too many responsibilities for a single ViewModel:
 
 
 ```kotlin
@@ -223,7 +223,9 @@ application. Besides that, it can make your codebase less flexible and
 adaptable to changes. That's because as the ViewModel relies heavily on
 specific external components, any changes to those components might
 necessitate modifications to the ViewModel, creating a ripple effect across the
-codebase. Finally, extensive dependencies often involve complex interactions
+codebase. 
+
+Finally, extensive dependencies often involve complex interactions
 with external services or repositories, making it difficult to create isolated unit
 tests for the ViewModel. Testing becomes cumbersome and may require
 extensive setup, leading to slower and less focused unit tests. The complexity
@@ -441,7 +443,8 @@ libraries can help with that.
 **Issue:** The ViewModel depends on multiple external components, including
 repositories, managers, and Android framework components.
 
-**Solution:** Introduce use cases or interactors to encapsulate complex business logic and
+**Solution:** Introduce [use cases](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) or 
+[interactors](https://proandroiddev.com/why-you-need-use-cases-interactors-142e8a6fe576) to encapsulate complex business logic and
 data operations.
 
 
@@ -522,17 +525,18 @@ class BadPracticeViewModel @Inject constructor(
 
 ## Diving a little deeper into treatment with States
 You could notice the usage of UI State data structures in the previous examples, like the
-`sealed class Result``. All these possible Results are immutable and this state is exposed
+`sealed class Result`. All these possible Results are immutable and this state is exposed
 in one place: `resultState`. This approach is an excellent remedy when treating a
 diseased ViewModel that's hard to test because we would have a finite number of
-possible view states to validate and a Single Source of Truth (SSOT).
+possible view states to validate and a 
+[Single Source of Truth (SSOT)](https://developer.android.com/topic/architecture#single-source-of-truth).
 
 This SSOT approach promotes consistency and reliability in data management within
 the application. It helps in maintaining a clear separation of concerns by centralizing
 data operations in the ViewModel, which acts as a mediator between the UI and the
 underlying data sources. This architecture facilitates the implementation of
-Unidirectional Data Flow (UDF), where data flows in a single direction—from the
-ViewModel to the UI components—avoiding circular dependencies and ensuring
+[Unidirectional Data Flow (UDF)](https://developer.android.com/topic/architecture?hl=pt-br#unidirectional-data-flow), 
+where data flows in a single direction—from the ViewModel to the UI components—avoiding circular dependencies and ensuring
 predictable data flow throughout the application lifecycle.
 
 

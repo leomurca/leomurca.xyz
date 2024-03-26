@@ -1,6 +1,7 @@
 ---
 title: "Desmistificando os testes de ViewModel: estratégias para criar ViewModels fáceis de testar"
 date: 2024-03-25T10:54:21-03:00
+description: "Aprenda as melhores práticas para escrever testes para seu ViewModel."
 featured_image: "/img/demystifying-viewmodel-testing/featured_image.webp"
 draft: false
 ---

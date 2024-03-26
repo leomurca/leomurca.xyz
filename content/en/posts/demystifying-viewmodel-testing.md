@@ -1,6 +1,7 @@
 ---
 title: "Demystifying ViewModel Testing: Strategies for Crafting Test-Friendly ViewModels"
 date: 2024-03-25T10:54:21-03:00
+description: "Learn the best practices for testing your ViewModels."
 featured_image: "/img/demystifying-viewmodel-testing/featured_image.webp"
 draft: false
 ---

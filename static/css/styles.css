@@ -77,8 +77,8 @@ h6 {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  color: #1d2021;
+  background-color: #171E26;
+  color: #d2e0f0;
   font-family: "Source Sans Pro";
   text-align: left;
   word-wrap: break-word;
@@ -94,12 +94,12 @@ body {
 
 body a {
   text-decoration: none;
-  color: #485fa0;
-  border-bottom: 3px solid #5C79CF;
+  color: #FF6600;
+  border-bottom: 3px solid #FF6600;
 }
 
 body a:hover {
-  background-color: #5C79CF;
+  background-color: #FF6600;
   color: #ffffff;
 }
 
@@ -113,7 +113,7 @@ h6 {
 }
 
 strong {
-  color: #5C79CF;
+  color: #ff6600;
   font-weight: bold;
 }
 
@@ -134,8 +134,8 @@ figcaption {
   top: 0;
   z-index: 999;
   padding: 1em;
-  background-color: #5C79CF;
-  color: #1d2021;
+  background-color: #FF6600;
+  color: #ffffff;
   font-weight: bold;
   opacity: 0;
 }
@@ -163,7 +163,7 @@ figcaption {
   font-size: 50px;
   margin: 0;
   padding: 0;
-  color: #5C79CF;
+  color: #FF6600;
   text-decoration: none;
 }
 
@@ -211,16 +211,17 @@ header {
 
 header nav a {
   margin-left: 20px;
+  color: #d2e0f0;
 }
 
 header h1 {
-  border-bottom: 3px solid #5C79CF;
+  border-bottom: 3px solid #FF6600;
   font-size: 2rem;
   width: fit-content;
 }
 
 header h1:hover {
-  background-color: #5C79CF;
+  background-color: #FF6600;
   color: #ffffff;
 }
 
@@ -300,14 +301,14 @@ footer p {
 
 .posted-on {
   font-style: italic;
-  color: #2f3335;
+  color: #D2DCF0;
   margin-bottom: 0;
 }
 
 .last-update {
   margin-top: 0;
   font-style: italic;
-  color: #2f3335;
+  color: #D2DCF0;
 }
 
 /* "Hide" checkbox -- moves it off screen*/
@@ -349,23 +350,23 @@ footer p {
   border-bottom: none;
   padding: 0;
   margin: 10px 0;
-  color: black;
+  color: #D2E0F0;
 }
 
 #card-list a:hover {
-  color: unset;
-  background-color: #adb6ce;
+  color: #ffffff;
+  background-color: #ff6600;
   transition: .3s;
 }
 
 #card-list img {
-  border-bottom: 2px solid #5C79CF;
+  border-bottom: 2px solid #ff6600;
 }
 
 #card-list a p {
   margin: 0;
   padding: 0;
-  color: black;
+  color: #D2E0F0;
 }
 
 /* endregion card*/

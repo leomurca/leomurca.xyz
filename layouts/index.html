@@ -12,16 +12,16 @@
           <h2 class="about-me-home-current-position">{{ i18n "home-position"}} <a href="https://arctouch.com/" target="_blank">ArcTouch</a></h2>
         <p>{{ i18n "home-introduction" (dict "years" (sub (now.Year) 2018)) }}</p>
         <div id="about-me-home-icons">
-          <a href="https://git.leomurca.xyz/" target="_blank">
+          <a href="https://git.leomurca.xyz/" target="_blank" aria-label="My personal git server.">
             <div class="main-icons">{{ partial "svg" "git" }}</div>
           </a>
-          <a href="https://github.com/leomurca" target="_blank">
+          <a href="https://github.com/leomurca" target="_blank" aria-label="My personal Github profile.">
             <div class="main-icons">{{ partial "svg" "github" }}</div>
           </a>
-          <a href="https://www.linkedin.com/in/leonardoamurca/" target="_blank">
+          <a href="https://www.linkedin.com/in/leonardoamurca/" target="_blank" aria-label="My personal LinkedIn profile.">
             <div class="main-icons">{{ partial "svg" "linkedin" }}</div>
           </a>
-          <a href="{{ .Site.Home.RelPermalink }}posts/index.xml" target="_blank">
+          <a href="{{ .Site.Home.RelPermalink }}posts/index.xml" target="_blank" aria-label="My RSS Feed.">
             <div class="main-icons">{{ partial "svg" "rss" }}</div>
           </a>
         </div>

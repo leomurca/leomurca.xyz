@@ -189,6 +189,24 @@ figcaption {
   margin-right: 10px;
 }
 
+.main-icons {
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
+
+.main-icons svg {
+  height: fit-content;
+}
+
+#about-me-home-icons a:hover path {
+  fill: #ffffff !important;
+}
+
+#about-me-home-icons a:hover polygon {
+  fill: #ffffff !important;
+}
+
 .main-title {
   text-decoration: unset;
   color: inherit;
@@ -322,6 +340,23 @@ footer p {
   height: 20px;
   width: 20px;
   margin-right: 10px;
+}
+
+#footer-icons a div {
+  display: flex;
+}
+
+#footer-icons a div svg {
+  width: fit-content;
+  height: fit-content;
+}
+
+#footer-icons a:hover path {
+  fill: #ffffff !important;
+}
+
+#footer-icons a:hover polygon {
+  fill: #ffffff !important;
 }
 
 /* endregion footer*/
@@ -570,10 +605,6 @@ footer p {
 
   .about-me-home-left {
     padding: 0;
-  }
-
-  #about-me-home-icons {
-    justify-content: center;
   }
 
   .articles-list ul {

@@ -13,24 +13,16 @@
         <p>{{ i18n "home-introduction" (dict "years" (sub (now.Year) 2018)) }}</p>
         <div id="about-me-home-icons">
           <a href="https://git.leomurca.xyz/" target="_blank">
-            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/git.svg"
-              alt="Git icon" />
-          </a>
-          <a href="https://gitlab.com/leomurca" target="_blank">
-            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30"
-              src="/icons/gitlab.svg" alt="Gitlab icon" />
+            <div class="main-icons">{{ partial "svg" "git" }}</div>
           </a>
           <a href="https://github.com/leomurca" target="_blank">
-            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30"
-              src="/icons/github.svg" alt="Github icon" />
+            <div class="main-icons">{{ partial "svg" "github" }}</div>
           </a>
           <a href="https://www.linkedin.com/in/leonardoamurca/" target="_blank">
-            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30"
-              src="/icons/linkedin.svg" alt="Linkedin icon" />
+            <div class="main-icons">{{ partial "svg" "linkedin" }}</div>
           </a>
           <a href="{{ .Site.Home.RelPermalink }}posts/index.xml" target="_blank">
-            <img style="width: 30px; height: 30px; padding: 0; margin: 0;" width="30" height="30" src="/icons/rss.svg"
-              alt="RSS Feed icon" />
+            <div class="main-icons">{{ partial "svg" "rss" }}</div>
           </a>
         </div>
       </div>

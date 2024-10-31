@@ -22,5 +22,8 @@ clean:
 	echo "Making $@"
 	rm -rf public/
 
-serve:
+prod:
 	python -m http.server --directory public
+
+dev:
+	hugo server

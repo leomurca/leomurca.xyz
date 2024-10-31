@@ -152,6 +152,7 @@ figcaption {
   justify-content: space-between;
   text-align: left;
   margin-top: 100px;
+  align-items: center;
 }
 
 .about-me-home img {
@@ -165,6 +166,11 @@ figcaption {
   padding: 0;
   color: #FF6600;
   text-decoration: none;
+}
+
+.about-me-home-current-position {
+  font-size: 1rem;
+  border-bottom: none;
 }
 
 .about-me-home-left {

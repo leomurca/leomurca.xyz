@@ -5,7 +5,9 @@
 [my-name-is]
   other="Olá, 👋 sou "
 [home-introduction]
-  other="Desenvolvo softwares com ótima aparência, sensação fantástica e funcionamento correto. Minhas especialidades são desenvolvimento Web e Android. Entre em contato comigo!"
+  other="Sou um engenheiro de software Android apaixonado, com 6 anos de experiência na construção de aplicações seguras e confiáveis. Minha expertise inclui habilidades avançadas em Jetpack Compose, Bluetooth Low Energy (BLE), Android Media Streaming, testes de UI e Coroutines, permitindo-me entregar soluções Android de alto desempenho. Tenho um histórico comprovado de sucesso em mentorar e treinar novos estagiários, contribuindo para o crescimento da equipe e desenvolvimento de habilidades. Também tenho bons conhecimentos em Desenvolvimento Web. :)"
+[home-position]
+  other="Desenvolvedor Android na"
 [my-projects]
   other="Projetos"
 [my-projects-description]

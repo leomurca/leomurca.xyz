@@ -9,9 +9,27 @@
     <span tabindex="-1" class="navicon"></span>
   </label>
 
+
   <nav class="menu">
     {{ range .Site.Menus.main }}
     <a class='nav-item' href="{{ .URL }}">{{ .Name }}</a>
     {{ end }}
   </nav>
+
+    {{ if eq "pt-br" .Site.LanguageCode}}
+      <a class="common-switch english-switch" href="{{ .Site.BaseURL }}">
+        <div style="display: flex; width: fit-content;">
+          <div class="language-icon">{{ partial "svg" "language" }}</div>
+          <span>English</span>
+        </div>
+      </a>
+    {{ else }}
+      <a class="common-switch portuguese-switch" href="{{ .Site.BaseURL }}/pt-br">
+        <div style="display: flex; width: fit-content;">
+          <div class="language-icon">{{ partial "svg" "language" }}</div>
+          <span>Português</span>
+        </div>
+      </a>
+    {{ end }}
+
 </header>

@@ -169,7 +169,7 @@ figcaption {
 }
 
 .about-me-home-current-position {
-  font-size: 1rem;
+  font-size: 20px;
   border-bottom: none;
 }
 
@@ -228,6 +228,60 @@ header h1 {
 
 header h1:hover {
   background-color: #FF6600;
+  color: #ffffff;
+}
+
+.language-icon {
+  width: 30px;
+  height: 24px;
+}
+
+.common-switch {
+  width: fit-content;
+}
+
+.common-switch:hover path {
+    fill: #ffffff !important;
+}
+
+.common-switch:hover polygon {
+    fill: #ffffff !important;
+}
+
+.portuguese-switch {
+  color: #0C8F27;
+  border-bottom: 3px solid #0C8F27;
+}
+
+.portuguese-switch path {
+  fill: #0C8F27 !important;
+}
+
+.portuguese-switch polygon {
+  fill: #0C8F27 !important;
+}
+
+.portuguese-switch:hover {
+  background: #0C8F27;
+  color: #ffffff;
+}
+
+.english-switch{
+  color: #BE0A2F;
+  border-bottom: 3px solid #BE0A2F;
+  width: fit-content;
+}
+
+.english-switch path {
+  fill: #BE0A2F !important;
+}
+
+.english-switch polygon {
+  fill: #BE0A2F !important;
+}
+
+.english-switch:hover {
+  background: #BE0A2F;
   color: #ffffff;
 }
 
@@ -405,8 +459,9 @@ footer p {
   header {
     display: grid;
     grid-template-areas:
-      "title   title   hamburger"
-      "nav     nav     nav";
+      "title   hamburger hamburger"
+      "nav     nav     nav"
+      "switch  switch  switch";
   }
 
   .menu a {
@@ -430,7 +485,7 @@ footer p {
   }
 
   .navicon {
-    background: #485fa0;
+    background: #FF6600;
     display: block;
     height: 2px;
     width: 18px;
@@ -447,7 +502,7 @@ footer p {
 
   .navicon:before,
   .navicon:after {
-    background: #485fa0;
+    background: #FF6600;
     display: block;
     width: 100%;
     height: 100%;
@@ -462,14 +517,14 @@ footer p {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background-color: #485fa0;
+    background-color: #FF6600;
     display: flex;
     flex-direction: column;
   }
 
   .menu a {
     margin: 0;
-    background-color: #5C79CF;
+    background-color: #FF6600;
     color: #ffffff;
     width: 100%;
     font-weight: 600;
@@ -540,7 +595,7 @@ footer p {
     white-space: break-spaces;
     border-bottom: none;
     text-decoration: underline;
-    text-decoration-color: #5C79CF;
+    text-decoration-color: #FF6600;
     text-decoration-thickness: 3px;
     line-height: 1.5;
     height: max-content;
@@ -568,6 +623,11 @@ footer p {
   #card-list img {
     width: 100%;
   }
+
+  .about-me-home-current-position {
+    font-size: 15px;
+  }
+
 }
 
 /* endregion responsive*/

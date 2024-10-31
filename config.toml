@@ -16,10 +16,9 @@ copyright = "copyright"
 [params]
   description = "home-page-description"
   featured_image = "/img/avatar.webp"
-
-[author]
-	name = "Leonardo Murça"
-	email = "leo@leomurca.xyz"
+  [params.author]
+	  name = "Leonardo Murça"
+	  email = "leo@leomurca.xyz"
 
 [languages]
   [languages.en]

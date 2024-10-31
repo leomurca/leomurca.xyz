@@ -17,8 +17,8 @@
     <link>{{ .Permalink }}</link>
     <description>{{ i18n "rss-description-recent-content" }} {{ if ne  .Title  .Site.Title }}{{ with .Title }} {{ i18n "rss-in"}} {{.}} {{ end }}{{ end }}{{ i18n "rss-on"}} {{ .Site.Title }}</description>
     {{ with .Site.LanguageCode }}
-    <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
-    {{end}}{{ with .Site.Author.email }}
+    <language>{{.}}</language>{{end}}{{ with .Site.Params.author.email }}
+    {{end}}{{ with .Site.Params.author.email }}
     {{end}}{{ with (i18n .Site.Copyright) }}
     <copyright>{{ . }}</copyright>{{end}}{{ if not .Date.IsZero }}
     <lastBuildDate>{{ i18n .Date.Day }}{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
@@ -30,7 +30,7 @@
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+      {{ with .Site.Params.author.email }}<author>{{.}}{{ with $.Site.Params.author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Content | html }}</description>
     </item>

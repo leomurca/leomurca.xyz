@@ -3,9 +3,11 @@
 [home-page-description]
   other="Leonardo Murça Webpage"
 [my-name-is]
-  other="Hi, my name is"
+  other="Hi there! 👋 I'm"
 [home-introduction]
-  other="I write good software that looks great, feels fantastic, and functions correctly. Web and Android development are my expeciallities. Reach me out!"
+  other="I am a passionate software engineer with {{ .years }} years of working experience. My expertise includes advanced skills in Jetpack Compose, Bluetooth Low Energy (BLE), Android Streaming Engineering, UI testing, and Coroutines, enabling me to deliver high-performance Android solutions. I have a proven track record of successfully mentoring and training new interns, contributing to team growth and skill development. I also have some good knowledge in Web Development. :)"
+[home-position]
+  other="Android Engineer at"
 [my-projects]
   other="Projects"
 [my-projects-description]
